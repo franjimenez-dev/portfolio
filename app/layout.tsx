@@ -16,23 +16,23 @@ export default function RootLayout({
 }: Readonly<{children: React.ReactNode; }>) {
     return (
         <html lang="es-ES">
-                <body
-                    className={cn(
-                        "min-h-screen bg-[#010206] font-sans antialiased my-bg-image relative",
-                        fontSans.variable
-                    )}
-                >
+                    <body
+                        className={cn(
+                            "min-h-screen bg-[#010206] font-sans antialiased my-bg-image relative",
+                            fontSans.variable
+                        )}
+                    >
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="dark"
                         disableTransitionOnChange
                     >
-                        <main className={"container "}>
-                            {children}
-                        </main>
-                        <ShadowBg/>
+                            <main className={"container"}>
+                                {children}
+                            </main>
+                            <ShadowBg/>
                     </ThemeProvider>
-                </body>
+                    </body>
         </html>
     );
 }
