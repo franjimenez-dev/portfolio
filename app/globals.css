@@ -80,6 +80,21 @@
   left: 0;
   height: 2px;
   width: 0;
-  background: currentColor;
+  background: linear-gradient(-90deg, hsl(275, 100%, 80%), hsl(345, 100%, 80%), hsl(9, 100%, 80%), hsl(39, 100%, 80%), hsl(69, 100%, 80%), hsl(159, 100%, 80%), hsl(248, 100%, 80%), hsl(275, 100%, 80%), hsl(345, 100%, 80%), hsl(9, 100%, 80%), hsl(39, 100%, 80%), hsl(69, 100%, 80%), hsl(159, 100%, 80%), hsl(248, 100%, 80%), hsl(275, 100%, 80%));
+  background-size: 200% 100%;
   transition: left 0.5s ease, width 0.3s ease;
+  animation: rainbow 6s linear infinite;
+}
+
+.rainbow-gradient {
+  background: linear-gradient(-90deg, hsl(275, 100%, 80%), hsl(345, 100%, 80%), hsl(9, 100%, 80%), hsl(39, 100%, 80%), hsl(69, 100%, 80%), hsl(159, 100%, 80%), hsl(248, 100%, 80%), hsl(275, 100%, 80%), hsl(345, 100%, 80%), hsl(9, 100%, 80%), hsl(39, 100%, 80%), hsl(69, 100%, 80%), hsl(159, 100%, 80%), hsl(248, 100%, 80%), hsl(275, 100%, 80%));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {background-position: 100% 0%;}
+  100% {background-position: 0% 0%;}
 }

@@ -69,17 +69,17 @@ const Navbar = () => {
     return (
         <div className="flex justify-center sm:justify-end sticky top-0 sm:top-12 text-xl text-white rounded-full">
             <nav
-                className="rounded-none w-full sm:w-fit sm:rounded-full border flex h-[3rem] py-3 sm:py-0 z-40 items-center justify-center sm:justify-end backdrop-blur-lg backdrop-saturate-150 space-x-6 p-4 absolute top-0 right-0 sm:right-20">
+                className="rounded-none w-full sm:w-fit sm:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-around backdrop-blur-lg backdrop-saturate-150 p-6 absolute top-0 right-0 sm:right-20">
                 <div className="line"></div>
                 <a href="#sobreMi" onClick={(e) => handleLinkClick(e, 'sobreMi')}
                    ref={linkRefs.sobreMi}
-                   className={activeLink === 'sobreMi' ? 'active' : ''}>Sobre mí</a>
+                   className={activeLink === 'sobreMi' ? 'my-gradient-class font-semibold' : 'font-semibold'}>Sobre mí</a>
                 <a href="#experiencia" onClick={(e) => handleLinkClick(e, 'experiencia')}
                    ref={linkRefs.experiencia}
-                   className={activeLink === 'experiencia' ? 'active' : ''}>Experiencia</a>
+                   className={activeLink === 'experiencia' ? 'my-gradient-class font-semibold ml-3 ' : '  ml-3 font-semibold'}>Experiencia</a>
                 <a href="#proyectos" onClick={(e) => handleLinkClick(e, 'proyectos')}
                    ref={linkRefs.proyectos}
-                   className={activeLink === 'proyectos' ? 'active' : ''}>Proyectos</a>
+                   className={activeLink === 'proyectos' ? 'my-gradient-class font-semibold ml-3 ' : '  ml-3 font-semibold'}>Proyectos</a>
             </nav>
         </div>
     )
