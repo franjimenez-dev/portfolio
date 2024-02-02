@@ -73,13 +73,13 @@ const Navbar = () => {
                 <div className="line"></div>
                 <a href="#sobreMi" onClick={(e) => handleLinkClick(e, 'sobreMi')}
                    ref={linkRefs.sobreMi}
-                   className={activeLink === 'sobreMi' ? 'my-gradient-class font-semibold' : 'font-semibold'}>Sobre mí</a>
+                   className={activeLink === 'sobreMi' ? 'rainbow-gradient font-semibold' : 'font-semibold'}>Sobre mí</a>
                 <a href="#experiencia" onClick={(e) => handleLinkClick(e, 'experiencia')}
                    ref={linkRefs.experiencia}
-                   className={activeLink === 'experiencia' ? 'my-gradient-class font-semibold ml-3 ' : '  ml-3 font-semibold'}>Experiencia</a>
+                   className={activeLink === 'experiencia' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold'}>Experiencia</a>
                 <a href="#proyectos" onClick={(e) => handleLinkClick(e, 'proyectos')}
                    ref={linkRefs.proyectos}
-                   className={activeLink === 'proyectos' ? 'my-gradient-class font-semibold ml-3 ' : '  ml-3 font-semibold'}>Proyectos</a>
+                   className={activeLink === 'proyectos' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold'}>Proyectos</a>
             </nav>
         </div>
     )
