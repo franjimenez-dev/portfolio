@@ -5,6 +5,7 @@ import {ThemeProvider} from "@/components/theme-provider";
 import {cn} from "@/lib/utils";
 import { fontSans } from "./font";
 import ShadowBg from "@/components/shadow-bg";
+import NavigationLogic from "@/components/navigation-logic";
 
 export const metadata: Metadata = {
     title: "Fran Jiménez",
@@ -18,7 +19,7 @@ export default function RootLayout({
         <html lang="es-ES">
                     <body
                         className={cn(
-                            "min-h-screen bg-[#010206] font-sans antialiased my-bg-image relative",
+                            "min-h-screen bg-[#010206] font-sans antialiased my-bg-image relative ",
                             fontSans.variable
                         )}
                     >
@@ -27,10 +28,10 @@ export default function RootLayout({
                         defaultTheme="dark"
                         disableTransitionOnChange
                     >
-                            <main className={"container"}>
-                                {children}
-                            </main>
-                            <ShadowBg/>
+                        <NavigationLogic>
+                            {children}
+                        </NavigationLogic>
+                        <ShadowBg/>
                     </ThemeProvider>
                     </body>
         </html>

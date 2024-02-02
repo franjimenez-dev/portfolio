@@ -1,10 +1,14 @@
-import {ModeToggle} from "@/components/toggle-theme";
-import {Button} from "@/components/ui/button";
+import AboutMeSection from "@/components/about-me-section";
+import ExperienceSection from "@/components/experience-section";
+import ProyectsSection from "@/components/ui/proyects-section";
 
 export default function Home() {
-  return (
-      <div className={"min-h-screen w-full flex justify-center items-center"}>
-        <h1 className={"text-7xl font-normal"}> hey </h1>
-      </div>
-  );
+
+    return (
+        <div className={"w-full flex flex-col justify-center items-center space-y-16"}>
+            <AboutMeSection/>
+            <ExperienceSection />
+            <ProyectsSection />
+        </div>
+    );
 }

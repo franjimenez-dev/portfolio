@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --border-width: 0;
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
@@ -27,6 +28,7 @@
   }
 
   .dark {
+    --border-width: 0;
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
     --card: 224 71.4% 4.1%;
@@ -59,10 +61,25 @@
 }
 
 .my-bg-image {
-  background-image: url('../public/bg/testeo15.jpg'); /* Reemplaza con la ruta a tu imagen de estrellas */
+  background-image: url('../public/bg/testeo15.jpg');
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
 
+.active {
+
+  color: yellow;
+
+}
+
+.line {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  transition: left 0.5s ease, width 0.3s ease;
 }
