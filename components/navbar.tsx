@@ -16,15 +16,20 @@ const Navbar = () => {
         setClicked(true);
         navigateTo(link);
 
-        const lineElement = document.querySelector('.line') as HTMLElement;
-        const linkElement = linkRefs[link].current as unknown as HTMLElement;
+        if (linkRefs[link]) {
+            const lineElement = document.querySelector('.line') as HTMLElement;
+            const linkElement = linkRefs[link].current as unknown as HTMLElement;
+            const parentElement = linkElement?.parentElement as HTMLElement;
 
-        if (linkElement) {
-            const linePosition = linkElement.offsetLeft;
-            const lineWidth = linkElement.offsetWidth;
+            if (linkElement && parentElement) {
+                const linkRect = linkElement.getBoundingClientRect();
+                const parentRect = parentElement.getBoundingClientRect();
+                const linePosition = linkRect.left - parentRect.left;
+                const lineWidth = linkRect.width;
 
-            lineElement.style.setProperty('left', `${linePosition}px`);
-            lineElement.style.setProperty('width', `${lineWidth}px`);
+                lineElement.style.setProperty('left', `${linePosition}px`);
+                lineElement.style.setProperty('width', `${lineWidth}px`);
+            }
         }
     };
 
@@ -36,28 +41,35 @@ const Navbar = () => {
 
         const lineElement = document.querySelector('.line') as HTMLElement;
         const handleActiveLinkChange = () => {
-            const activeLinkRef = linkRefs[activeLink].current as unknown as HTMLElement;
+            if (linkRefs[activeLink]) {
+                const activeLinkRef = linkRefs[activeLink].current as unknown as HTMLElement;
+                const parentElement = activeLinkRef?.parentElement as HTMLElement;
 
-            if (activeLinkRef) {
-                const linePosition = activeLinkRef.offsetLeft;
-                const lineWidth = activeLinkRef.offsetWidth;
+                if (activeLinkRef && parentElement) {
+                    const linkRect = activeLinkRef.getBoundingClientRect();
+                    const parentRect = parentElement.getBoundingClientRect();
+                    const linePosition = linkRect.left - parentRect.left;
+                    const lineWidth = linkRect.width;
 
-                lineElement.style.setProperty('left', `${linePosition}px`);
-                lineElement.style.setProperty('width', `${lineWidth}px`);
+                    lineElement.style.setProperty('left', `${linePosition}px`);
+                    lineElement.style.setProperty('width', `${lineWidth}px`);
+                }
             }
         };
 
         handleActiveLinkChange();
+        window.addEventListener('resize', handleActiveLinkChange);
 
         return () => {
             window.removeEventListener('scroll', handleActiveLinkChange);
+            window.removeEventListener('resize', handleActiveLinkChange);
         };
     }, [activeLink]);
 
     return (
-        <div className="flex justify-end sticky top-12 inset-x-0 text-xl text-white rounded-full">
+        <div className="flex justify-center sm:justify-end sticky top-0 sm:top-12 text-xl text-white rounded-full">
             <nav
-                className="rounded-full border flex h-[3rem] z-40 w-fit items-center justify-end backdrop-blur-lg backdrop-saturate-150 space-x-8 p-4 absolute top-0 right-20">
+                className="rounded-none w-full sm:w-fit sm:rounded-full border flex h-[3rem] py-3 sm:py-0 z-40 items-center justify-center sm:justify-end backdrop-blur-lg backdrop-saturate-150 space-x-6 p-4 absolute top-0 right-0 sm:right-20">
                 <div className="line"></div>
                 <a href="#sobreMi" onClick={(e) => handleLinkClick(e, 'sobreMi')}
                    ref={linkRefs.sobreMi}

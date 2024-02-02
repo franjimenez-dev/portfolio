@@ -5,7 +5,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollToPlugin);
 
 export const useActiveLinkOnScroll = (ids: string[]) => {
-    const [activeLink, setActiveLink] = useState(ids[0]);
+    const [activeLink, setActiveLink] = useState('');
 
     const navigateTo = (id: string) => {
         if (id === 'sobreMi') {
@@ -33,7 +33,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
                     const rect = element.getBoundingClientRect();
                     const nextElement = ids[index + 1] ? document.getElementById(ids[index + 1]) : null;
                     const nextRect = nextElement ? nextElement.getBoundingClientRect() : null;
-                    const offset = 300; // Ajusta este valor para cambiar cuándo se activa el cambio de sección
+                    const offset = 300; // Adjust this value to change when the section change is triggered
                     if (id === 'sobreMi' && nextRect && nextRect.top > offset) {
                         currentLink = id;
                     } else if ((rect.top <= offset && (!nextRect || nextRect.top > offset)) || (index === ids.length - 1 && rect.bottom <= window.innerHeight)) {
@@ -44,6 +44,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
             setActiveLink(currentLink);
         };
 
+        onScroll(); // Call onScroll immediately to set the initial activeLink based on the current scroll position
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, [ids]);
