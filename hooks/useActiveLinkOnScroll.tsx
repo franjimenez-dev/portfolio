@@ -8,7 +8,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
     const [activeLink, setActiveLink] = useState('');
 
     const navigateTo = (id: string) => {
-        if (id === 'sobreMi') {
+        if (id === 'inicio') {
             gsap.to(window, {duration: 1, scrollTo: {y: 0, autoKill: false, onAutoKill: () => setActiveLink(id)}});
         } else {
             const element = document.getElementById(id);
@@ -34,7 +34,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
                     const nextElement = ids[index + 1] ? document.getElementById(ids[index + 1]) : null;
                     const nextRect = nextElement ? nextElement.getBoundingClientRect() : null;
                     const offset = 300; // Adjust this value to change when the section change is triggered
-                    if (id === 'sobreMi' && nextRect && nextRect.top > offset) {
+                    if (id === 'inicio' && nextRect && nextRect.top > offset) {
                         currentLink = id;
                     } else if ((rect.top <= offset && (!nextRect || nextRect.top > offset)) || (index === ids.length - 1 && rect.bottom <= window.innerHeight)) {
                         currentLink = id;
@@ -44,7 +44,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
             setActiveLink(currentLink);
         };
 
-        onScroll(); // Call onScroll immediately to set the initial activeLink based on the current scroll position
+        onScroll();
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
     }, [ids]);
