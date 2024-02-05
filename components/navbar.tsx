@@ -1,17 +1,19 @@
 'use client';
 import React, {useEffect, useRef, useState} from "react";
 import { useActiveLinkOnScroll } from "@/hooks/useActiveLinkOnScroll";
+import {FaBriefcase, FaStar} from "react-icons/fa6";
+import {MdAlternateEmail} from "react-icons/md";
 
 const Navbar = () => {
-    const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio', 'trabajos', 'experiencia', 'estudios', 'sobreMi']);
+    const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio', 'trabajos', 'experiencia', 'contacto']);
     const [clicked, setClicked] = useState(false);
     const [clickedLink, setClickedLink] = useState('');
     const linkRefs: { [ key: string]: React.MutableRefObject<null>} = {
         inicio: useRef(null),
         trabajos: useRef(null),
         experiencia: useRef(null),
-        estudios: useRef(null),
-        sobreMi: useRef(null),
+        // estudios: useRef(null),
+        contacto: useRef(null),
     };
 
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
@@ -75,26 +77,54 @@ const Navbar = () => {
     }, [activeLink]);
 
     return (
-        <div className="flex justify-center sm:justify-end sticky top-0 sm:top-12 text-xl text-white rounded-full">
+        <div className="flex justify-center sticky top-0 md:top-12 sm:text-xl text-white rounded-full">
             <nav
-                className="rounded-none w-full sm:w-fit sm:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-around backdrop-blur-lg backdrop-saturate-150 p-6 absolute top-0 right-0 sm:right-20">
+                className="rounded-none w-full md:w-fit md:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg backdrop-saturate-150 p-6 absolute top-0 right-0 md:right-20">
+
                 <div className="line"></div>
+
                 <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}
                    ref={linkRefs.inicio}
-                   className={clickedLink !== '' ? (clickedLink === 'inicio' ? 'rainbow-gradient font-semibold' : 'font-semibold') : (activeLink === 'inicio' ? 'rainbow-gradient font-semibold' : 'font-semibold')}>Inicio</a>
+                   className={`font-semibold flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'inicio' ? 'text-yellow-200' : '') : (activeLink === 'inicio' ? 'text-yellow-200' : '')}`}
+                >
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem]">
+                        <path fillRule="evenodd"
+                              d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
+                              clipRule="evenodd"/>
+                    </svg>
+                    Inicio
+                </a>
                 <a href="#trabajos" onClick={(e) => handleLinkClick(e, 'trabajos')}
                    ref={linkRefs.trabajos}
-                   className={clickedLink !== '' ? (clickedLink === 'trabajos' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold') : (activeLink === 'trabajos' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold')}>Trabajos</a>
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'trabajos' ? 'text-yellow-200' : '') : (activeLink === 'trabajos' ? 'text-yellow-200' : '')}`}
+                >
+                    <FaStar className={"hidden sm:block w-[1.175rem] h-[1.175rem] mb-[0.15rem] mr-[0.1rem]"} />
+
+                    Trabajos
+                </a>
+
                 <a href="#experiencia" onClick={(e) => handleLinkClick(e, 'experiencia')}
                    ref={linkRefs.experiencia}
-                   className={clickedLink !== '' ? (clickedLink === 'experiencia' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold') : (activeLink === 'experiencia' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold')}>Experiencia</a>
-                <a href="#estudios" onClick={(e) => handleLinkClick(e, 'estudios')}
-                   ref={linkRefs.estudios}
-                   className={clickedLink !== '' ? (clickedLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold') : (activeLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold')}>Estudios</a>
-                <a href="#sobreMi" onClick={(e) => handleLinkClick(e, 'sobreMi')}
-                   ref={linkRefs.sobreMi}
-                   className={clickedLink !== '' ? (clickedLink === 'sobreMi' ? 'rainbow-gradient font-semibold ml-3' : 'font-semibold ml-3') : (activeLink === 'sobreMi' ? 'rainbow-gradient font-semibold ml-3' : 'font-semibold ml-3')}>Sobre
-                    mí</a>
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'experiencia' ? 'text-yellow-200' : '') : (activeLink === 'experiencia' ? 'text-yellow-200' : '')}`}
+                >
+                    <FaBriefcase className={"hidden sm:block w-[1.15rem] h-[1.15rem] mb-[0.15rem] mr-[0.275rem]"} />
+
+                    Experiencia
+                </a>
+
+                {/*<a href="#estudios" onClick={(e) => handleLinkClick(e, 'estudios')}*/}
+                {/*   ref={linkRefs.estudios}*/}
+                {/*   className={clickedLink !== '' ? (clickedLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold') : (activeLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold')}>Estudios</a>*/}
+
+                <a href="#contacto" onClick={(e) => handleLinkClick(e, 'contacto')}
+                   ref={linkRefs.contacto}
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'contacto' ? 'text-yellow-200' : '') : (activeLink === 'contacto' ? 'text-yellow-200' : '')}`}
+                >
+                    <MdAlternateEmail className={"hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem]"}/>
+
+                    Contacto
+                </a>
             </nav>
         </div>
     )
