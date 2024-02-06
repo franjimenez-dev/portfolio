@@ -181,6 +181,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 .active {
-  animation: sparkle 1s linear;
-  filter: drop-shadow(0 0 0);
+  animation: sparkle 0.75s linear;
 }

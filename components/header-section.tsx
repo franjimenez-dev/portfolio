@@ -41,36 +41,64 @@ const ProyectsSection = () => {
                             alt="Avatar"
                             width={75}
                             height={75}
-                            className="rounded-full border-4 bg-yellow-200 border-yellow-200 "
+                            className="rounded-full border-4 bg-[#FDE68A] border-[#FDE68A] "
                         />
                     </div>
                     <div className={"visible sm:hidden"}>
                         <h1 className="text-4xl sm:text-5xl">
-                            <span className="text-yellow-200 font-bold font-mono ml-2 whitespace-nowrap"> Fran Jiménez</span>
+                            <span className="text-[#FDE68A] font-bold font-mono ml-2 whitespace-nowrap"> Fran Jiménez</span>
                         </h1>
                         <h2 className="flex flex-shrink text-xl sm:text-3xl my-2 font-semibold font-mono whitespace-nowrap"> 🚀
                             Desarrollador web
                         </h2>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at
-                    expedita minus
-                    necessitatibus reiciendis, soluta. Amet aperiam architecto assumenda beatae, dignissimos dolorem
-                    enim est labore odit, saepe sed sunt vel? Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Ab cum debitis deleniti eaque, est et, eum harum maxime minus nulla officiis quia quidem
-                    quo sit ut, voluptatem voluptatibus. Et, nihil! Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Aspernatur at
-                    expedita minus
-                    necessitatibus reiciendis, soluta. Amet aperiam architecto assumenda beatae, dignissimos dolorem
-                    enim est labore odit, saepe sed sunt vel? Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Ab cum debitis deleniti eaque, est et, eum harum maxime minus nulla officiis quia quidem
-                    quo sit ut, voluptatem voluptatibus. Et, nihil!</p>
+                <p>
+                    {/*<span className={"text-[#FDE68A] font-semibold"}>PHP</span>*/}
+                    Inicié mi trayectoria en el <span className={"text-[#FDE68A] font-bold"}>Grado Superior en Desarrollo de Aplicaciones Web</span>.
+                    Desde siempre me he caracterizado por un fuerte sentido de la responsabilidad y una gran curiosidad que me guía en busca de nuevos retos. Tengo una base sólida en
+                    <span className={"text-[#FDE68A] font-bold"}> PHP </span>(<span className={"text-[#FDE68A] font-bold"}>+Laravel</span>)
+                    y buenos conocimientos en <span className={"text-[#FDE68A] font-bold"}>bases de datos relacionales</span> (<span className={"text-[#FDE68A] font-bold"}>MySQL</span>) y <span className={"text-[#FDE68A] font-bold"}>no relacionales</span> (<span className={"text-[#FDE68A] font-bold"}>MongoDB</span>).
+                </p>
+                <p className={"pt-3"}>
+                    Me apasiona el ecosistema de
+                    <span className={"text-[#FDE68A] font-bold"}> JavaScript</span>, desde lo mas asentado en el sector
+                    como
+                    <span className={"text-[#FDE68A] font-bold"}> Node.js</span>, <span
+                    className={"text-[#FDE68A] font-bold"}> Express</span> o <span
+                    className={"text-[#FDE68A] font-bold"}> React</span> hasta las tecnologías mas modernas como
+                    <span className={"text-[#FDE68A] font-bold"}> Next.js</span>. Considero esencial aprovechar toda
+                    tecnología que nos ayude a ser más productivos y eficientes,
+                    por eso he incorporado a mi stack de trabajo herramientas de <span
+                    className={"text-[#FDE68A] font-bold"}> Inteligencia Artificial</span> (<span
+                    className={"text-[#FDE68A] font-bold"}>GitHub Copilot</span>,
+                    <span className={"text-[#FDE68A] font-bold"}> ChatGPT</span>).
+                    <span className={""}> En este mundo
+                        tan cambiante siempre hay que
+                        estar dispuesto a aprender y a adaptarse a las nuevas tecnologías.
+                    </span>
+                </p>
             </div>
             <div className="clear-both"></div>
         </div>
+        <div>
+            <h1 className={"text-4xl text-center mt-12 font-semibold font-mono"}>
+                Tecnologías
+            </h1>
+            <div className={"shadow shadow-[#FDE68A] rounded-2xl p-3"}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dol                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                or sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum esse fugiat, fugit, laboriosam laborum necessitatibus nisi nulla officia placeat quod reiciendis sunt tempore vero voluptate. A assumenda culpa quidem!
+            </div>
+        </div>
     </header>
-)
-    ;
+    )
+        ;
 };
 
 export default ProyectsSection;
