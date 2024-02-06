@@ -3,11 +3,16 @@ import React, {useEffect, useRef, useState} from "react";
 import { useActiveLinkOnScroll } from "@/hooks/useActiveLinkOnScroll";
 import {FaBriefcase, FaStar} from "react-icons/fa6";
 import {MdAlternateEmail} from "react-icons/md";
+import {HiMiniHome} from "react-icons/hi2";
 
 const Navbar = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio', 'trabajos', 'experiencia', 'contacto']);
     const [clicked, setClicked] = useState(false);
     const [clickedLink, setClickedLink] = useState('');
+    const [isJobClicked, setIsJobClicked] = useState(false);
+    const [isHomeClicked, setIsHomeClicked] = useState(false);
+    const [isExperienceClicked, setIsExperienceClicked] = useState(false);
+    const [isContactClicked, setIsContactClicked] = useState(false);
     const linkRefs: { [ key: string]: React.MutableRefObject<null>} = {
         inicio: useRef(null),
         trabajos: useRef(null),
@@ -18,9 +23,27 @@ const Navbar = () => {
 
     const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, link: string) => {
         e.preventDefault();
+
+        if (activeLink === link) {
+            return;
+        }
+
         setClicked(true);
         setClickedLink(link);
         navigateTo(link);
+
+        if (link === 'trabajos') {
+            setIsJobClicked(true);
+        }
+        if (link === 'inicio') {
+            setIsHomeClicked(true);
+        }
+        if (link === 'experiencia') {
+            setIsExperienceClicked(true);
+        }
+        if (link === 'contacto') {
+            setIsContactClicked(true);
+        }
 
         if (linkRefs[link]) {
             const lineElement = document.querySelector('.line') as HTMLElement;
@@ -38,6 +61,38 @@ const Navbar = () => {
             }
         }
     };
+
+    useEffect(() => {
+        if (isHomeClicked) {
+            setTimeout(() => {
+                setIsHomeClicked(false);
+            }, 1000);
+        }
+    }, [isHomeClicked]);
+
+    useEffect(() => {
+        if (isJobClicked) {
+            setTimeout(() => {
+                setIsJobClicked(false);
+            }, 1000);
+        }
+    }, [isJobClicked]);
+
+    useEffect(() => {
+        if (isExperienceClicked) {
+            setTimeout(() => {
+                setIsExperienceClicked(false);
+            }, 1000);
+        }
+    }, [isExperienceClicked]);
+
+    useEffect(() => {
+        if (isContactClicked) {
+            setTimeout(() => {
+                setIsContactClicked(false);
+            }, 1000);
+        }
+    }, [isContactClicked]);
 
     useEffect(() => {
         if (clicked) {
@@ -70,6 +125,21 @@ const Navbar = () => {
         handleActiveLinkChange();
         window.addEventListener('resize', handleActiveLinkChange);
 
+        if (activeLink === 'trabajos') {
+            setIsJobClicked(true);
+        }
+
+        if (activeLink === 'inicio') {
+            setIsHomeClicked(true);
+        }
+
+        if (activeLink === 'experiencia') {
+            setIsExperienceClicked(true);
+        }
+        if (activeLink === 'contacto') {
+            setIsContactClicked(true);
+        }
+
         return () => {
             window.removeEventListener('scroll', handleActiveLinkChange);
             window.removeEventListener('resize', handleActiveLinkChange);
@@ -85,30 +155,25 @@ const Navbar = () => {
 
                 <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}
                    ref={linkRefs.inicio}
-                   className={`font-semibold flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'inicio' ? 'text-yellow-200' : '') : (activeLink === 'inicio' ? 'text-yellow-200' : '')}`}
+                   className={`font-semibold flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'inicio' ? 'text-[#FDE68A]' : '') : (activeLink === 'inicio' ? 'text-[#FDE68A]' : '')} ${isHomeClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
+                    <HiMiniHome className={`hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem] ${isHomeClicked ? 'home-animation' : ''}`} />
 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem]">
-                        <path fillRule="evenodd"
-                              d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
-                              clipRule="evenodd"/>
-                    </svg>
                     Inicio
                 </a>
                 <a href="#trabajos" onClick={(e) => handleLinkClick(e, 'trabajos')}
                    ref={linkRefs.trabajos}
-                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'trabajos' ? 'text-yellow-200' : '') : (activeLink === 'trabajos' ? 'text-yellow-200' : '')}`}
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'trabajos' ? 'text-[#FDE68A]' : '') : (activeLink === 'trabajos' ? 'text-[#FDE68A]' : '')} ${isJobClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
-                    <FaStar className={"hidden sm:block w-[1.175rem] h-[1.175rem] mb-[0.15rem] mr-[0.1rem]"} />
-
+                    <FaStar className={`hidden sm:block w-[1.175rem] h-[1.175rem] mb-[0.15rem] mr-[0.1rem] ${isJobClicked ? 'job-animation' : ''}`} />
                     Trabajos
                 </a>
 
                 <a href="#experiencia" onClick={(e) => handleLinkClick(e, 'experiencia')}
                    ref={linkRefs.experiencia}
-                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'experiencia' ? 'text-yellow-200' : '') : (activeLink === 'experiencia' ? 'text-yellow-200' : '')}`}
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'experiencia' ? 'text-[#FDE68A]' : '') : (activeLink === 'experiencia' ? 'text-[#FDE68A]' : '')} ${isExperienceClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
-                    <FaBriefcase className={"hidden sm:block w-[1.15rem] h-[1.15rem] mb-[0.15rem] mr-[0.275rem]"} />
+                    <FaBriefcase className={`hidden sm:block w-[1.15rem] h-[1.15rem] mb-[0.15rem] mr-[0.275rem] ${isExperienceClicked ? 'experience-animation' : ''}`} />
 
                     Experiencia
                 </a>
@@ -119,9 +184,9 @@ const Navbar = () => {
 
                 <a href="#contacto" onClick={(e) => handleLinkClick(e, 'contacto')}
                    ref={linkRefs.contacto}
-                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'contacto' ? 'text-yellow-200' : '') : (activeLink === 'contacto' ? 'text-yellow-200' : '')}`}
+                   className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'contacto' ? 'text-[#FDE68A]' : '') : (activeLink === 'contacto' ? 'text-[#FDE68A]' : '')} ${isContactClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
-                    <MdAlternateEmail className={"hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem]"}/>
+                    <MdAlternateEmail className={`hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem] ${isContactClicked ? 'contact-animation' : ''}`}/>
 
                     Contacto
                 </a>
