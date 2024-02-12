@@ -7,7 +7,7 @@ import HeaderSection from "@/components/header-section";
 export default function Home() {
 
     return (
-        <div className={"w-full flex flex-col justify-center items-center space-y-16"}>
+        <div className={"flex flex-col justify-center items-center space-y-16 z-10"}>
             <HeaderSection />
             <WorksSection />
             <ExperienceSection />
