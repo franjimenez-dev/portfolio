@@ -78,7 +78,18 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+      require("tailwindcss-animate"),
+    function({ addUtilities }: Record<string, any>) {
+      const newUtilities = {
+        '.gradient-border': {
+          'background': 'linear-gradient(to right, #c084fc, #FDE68A)',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+
+  ],
 } satisfies Config
 
 export default config

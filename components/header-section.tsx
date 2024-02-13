@@ -1,5 +1,5 @@
 'use client';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
 import Image from "next/image";
 import Portfolio from "@/components/portfolio";
@@ -7,16 +7,53 @@ import Technologies from "@/components/technologies";
 import Link from "next/link";
 import linkedin from "@/public/logos/linkedin.svg";
 import {IoIosMail} from "react-icons/io";
+import AnimatedTextRocket from "@/components/animated-text-rocket";
+import AnimatedName from "@/components/animated-name";
 
 const ProyectsSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio']);
-    const [hoverAvaible, setHoverAvaible] = useState(false);
+    const [onHoverAvailable, setOnHoverAvailable] = useState(false);
+    const [onHoverLinkedIn, setOnHoverLinkedIn] = useState(false);
+    const [onHoverGitHub, setOnHoverGitHub] = useState(false);
+    const [onHoverDiscord, setOnHoverDiscord] = useState(false);
+    const [onHoverEmail, setOnHoverEmail] = useState(false);
 
+
+    useEffect(() => {
+        setOnHoverAvailable(false)
+    }, []);
+
+    useEffect(() => {
+        if (onHoverLinkedIn) {
+            setTimeout(() => {
+                setOnHoverLinkedIn(false)
+            }, 350)
+        }
+
+        if (onHoverGitHub) {
+            setTimeout(() => {
+                setOnHoverGitHub(false)
+            }, 350)
+        }
+
+        if (onHoverDiscord) {
+            setTimeout(() => {
+                setOnHoverDiscord(false)
+            }, 350)
+        }
+
+        if (onHoverEmail) {
+            setTimeout(() => {
+                setOnHoverEmail(false)
+            }, 350)
+        }
+
+    }, [onHoverLinkedIn, onHoverGitHub, onHoverDiscord, onHoverEmail]);
     return (
         <>
-            <header id="inicio" className={"my-5 pt-16 sm:pt-36 w-full"}>
+            <header id="inicio" className={"my-5 pt-16 sm:pt-36 w-full overflow-hidden"}>
                 <div className=" flex justify-center items-center mx-2 sm:mx-16">
-                    <div className="hidden sm:block bg-[#FDE68A] shadow-2xl shadow-[#FDE68A]"
+                    <div className="hidden sm:block shadow-md shadow-[#c084fc] gradient-border p-1 "
                          style={{
                              float: 'left',
                              shapeOutside: 'circle(50%)',
@@ -24,13 +61,13 @@ const ProyectsSection = () => {
                              marginRight: '2rem',
                              overflow: 'hidden'
                          }}>
-                        <Image
-                            src="/owner.jpg"
-                            alt="Avatar"
-                            width={900}
-                            height={900}
-                            className="w-[120px] md:w-[200px] h-[120px] md:h-[200px] rounded-full border-4 bg-[#FDE68A] border-[#FDE68A] "
-                        />
+                            <Image
+                                src="/owner.webp"
+                                alt="Avatar"
+                                width={200}
+                                height={200}
+                                className="w-[120px] md:w-[200px] h-[120px] md:h-[200px] rounded-full select-none"
+                            />
                     </div>
                     <div className="">
                         <div className={"hidden sm:visible sm:block "}>
@@ -39,22 +76,26 @@ const ProyectsSection = () => {
                                 className="text-xl sm:text-lg font-semibold my-2 font-mono w-full flex justify-between items-center whitespace-nowrap"
                             >
                                 <div className="flex items-center"
-                                     onMouseEnter={() => setHoverAvaible(true)}
-                                     onMouseLeave={() => setHoverAvaible(false)}
+                                     onMouseEnter={() => setOnHoverAvailable(true)}
+                                     onMouseLeave={() => setOnHoverAvailable(false)}
                                 >
                                     <span className="relative inline-flex overflow-hidden rounded-full p-[2px]">
                                         <span
-                                            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FDE68A_0%,#5e4b00_50%,#FDE68A_100%)]"
+                                            className={`absolute inset-[-1000%] animate-[spin_3s_linear_infinite]${ onHoverAvailable ? ' bg-[conic-gradient(from_90deg_at_50%_50%,#c084fc_0%,#FDE68A_50%,#c084fc_100%)] ' : ' bg-[conic-gradient(from_90deg_at_50%_50%,#FDE68A_0%,#5e4b00_50%,#FDE68A_100%)]'}`}
                                         />
                                         <Link href={"https://www.linkedin.com/in/franjimenez-dev/"} target={"_blank"}
-                                            className={`inline-flex items-center justify-center w-full px-3 py-1 text-sm ${hoverAvaible ? 'text-[#FDE68A]' : 'text-white'} rounded-full bg-[#010206] cursor-pointer backdrop-blur-3xl whitespace-nowrap`}>
+                                            className={`inline-flex items-center justify-center w-full px-3 py-1 select-none text-sm ${onHoverAvailable ? 'text-[#FDE68A]' : 'text-white'} rounded-full bg-[#010206] cursor-pointer backdrop-blur-3xl whitespace-nowrap`}>
                                             Disponible para trabajar
                                         </Link>
                                     </span>
                                 </div>
                                 <div className={"flex justify-center"}>
                                     <div className={"ml-3 flex items-center"}>
-                                        <Link href={"https://www.linkedin.com/in/franjimenez-dev/"} target={"_blank"}>
+                                        <Link href={"https://www.linkedin.com/in/franjimenez-dev/"}
+                                              onMouseEnter={() => setOnHoverLinkedIn(true)}
+                                              className={`${onHoverLinkedIn ? 'button-spark' : '' }`}
+                                              target={"_blank"}
+                                        >
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
                                                  className={"w-6 h-6 hover:text-[#FDE68A]"} fill={"currentColor"}>
                                                 <path
@@ -64,6 +105,8 @@ const ProyectsSection = () => {
                                     </div>
                                     <div className={"ml-3 flex items-center"}>
                                         <Link href={"https://github.com/franjimenez-dev"}
+                                              onMouseEnter={() => setOnHoverGitHub(true)}
+                                              className={`${onHoverGitHub ? 'button-spark' : '' }`}
                                               target={"_blank"}>
                                             <svg viewBox="0 0 256 250" fill="currentColor"
                                                  xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"
@@ -76,7 +119,8 @@ const ProyectsSection = () => {
                                     </div>
                                     <div className={"ml-3 flex items-center"}>
                                         <Link href={"https://discordapp.com/users/912350432389656616"}
-                                              className={""}
+                                              onMouseEnter={() => setOnHoverDiscord(true)}
+                                              className={`${onHoverDiscord ? 'button-spark' : '' }`}
                                               target={"_blank"}>
 
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
@@ -90,7 +134,10 @@ const ProyectsSection = () => {
                                         </Link>
                                     </div>
                                     <div className={"ml-3"}>
-                                        <Link href={"mailto:franjimenez.dev@gmail.com"}>
+                                        <Link href={"mailto:franjimenez.dev@gmail.com"}
+                                              onMouseEnter={() => setOnHoverEmail(true)}
+                                              className={`${onHoverEmail ? 'button-spark' : '' }`}
+                                        >
 
                                             <svg viewBox="0 0 24 24" fill="" xmlns="http://www.w3.org/2000/svg"
                                                  className={"w-7 h-7 hover:text-[#FDE68A]"}>
@@ -108,13 +155,12 @@ const ProyectsSection = () => {
                                     </div>
                                 </div>
                             </h3>
-                            <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl items-start">
-                                <span
-                                    className="text-[#FDE68A] font-bold font-mono whitespace-nowrap"> Fran Jiménez</span>
-                            </h1>
-                            <h2 className="flex flex-shrink text-xl md:text-3xl lg:text-3xl xl:text-4xl my-2 font-semibold font-mono whitespace-nowrap"> 🚀
-                                Desarrollador web
-                            </h2>
+
+                            <AnimatedName/>
+                            <AnimatedTextRocket/>
+                            {/*<h2 className={`flex flex-shrink text-xl md:text-3xl lg:text-3xl xl:text-4xl my-2 font-semibold font-mono whitespace-nowrap`}> 🚀*/}
+                            {/*    Desarrollador web*/}
+                            {/*</h2>*/}
                         </div>
                         <div className={"visible sm:hidden flex justify-start items-center sm:flex-none"}>
                             <div className="mx-0 sm:mx-16 w-20 h-20">
@@ -128,7 +174,7 @@ const ProyectsSection = () => {
                             </div>
                             <div className={"visible sm:hidden"}>
                                 <h1 className="text-4xl sm:text-5xl">
-                                    <span className="text-[#FDE68A] font-bold font-mono ml-2 whitespace-nowrap "> Fran Jiménez</span>
+                                    <span className="text-[#FDE68A] font-bold font-mono ml-2 whitespace-nowrap"> Fran Jiménez</span>
                                 </h1>
                                 <h2 className="flex flex-shrink text-xl sm:text-3xl my-2 font-semibold font-mono whitespace-nowrap"> 🚀
                                     Desarrollador web
