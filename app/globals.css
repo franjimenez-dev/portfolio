@@ -86,8 +86,6 @@ body::-webkit-scrollbar-thumb {
   background-attachment: fixed;
 }
 
-/*.active {}*/
-
 .line {
   position: absolute;
   bottom: 0.65rem;
@@ -188,19 +186,6 @@ body::-webkit-scrollbar-thumb {
   animation: sparkle 0.35s linear;
 }
 
-@keyframes gradient-rotate {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-.gradient-border {
-  animation: gradient-rotate 3s linear infinite;
-}
-
 @keyframes sparkle-violet {
   0% {
     filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
@@ -215,7 +200,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-
 .button-spark-violet {
   animation: sparkle-violet 0.35s linear;
 }
@@ -227,3 +211,135 @@ body::-webkit-scrollbar-thumb {
 .button-spark-violet-alt {
     animation: sparkle-violet 0.35s linear;
 }
+
+
+@keyframes sparkle-pastel-red {
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(345, 100%, 75%)) drop-shadow(0 0 4px hsl(345, 100%, 75%)) drop-shadow(0 0 4px hsl(345, 100%, 75%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(345, 100%, 75%);
+  }
+}
+@keyframes sparkle-pastel-orange {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(9, 100%, 75%)) drop-shadow(0 0 4px  hsl(9, 100%, 75%)) drop-shadow(0 0 4px  hsl(9, 100%, 75%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(9, 100%, 75%);
+  }
+}
+@keyframes sparkle-pastel-yellow {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(39, 100%, 75%)) drop-shadow(0 0 4px hsl(39, 100%, 75%)) drop-shadow(0 0 4px hsl(39, 100%, 75%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(39, 100%, 75%);
+  }
+}
+@keyframes sparkle-pastel-green {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(89, 100%, 75%)) drop-shadow(0 0 4px hsl(89, 100%, 75%)) drop-shadow(0 0 4px hsl(89, 100%, 75%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(89, 100%, 75%);
+  }
+}
+@keyframes sparkle-pastel-blue {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(180, 100%, 70%)) drop-shadow(0 0 4px hsl(180, 100%, 70%)) drop-shadow(0 0 4px hsl(180, 100%, 70%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(180, 100%, 70%);
+  }
+}
+@keyframes sparkle-pastel-indigo {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px hsl(238, 100%, 70%)) drop-shadow(0 0 4px hsl(238, 100%, 70%)) drop-shadow(0 0 4px hsl(238, 100%, 70%));
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: hsl(238, 100%, 70%);
+  }
+}
+@keyframes sparkle-pastel-violet {
+
+  0% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: inherit;
+  }
+  50% {
+    filter: drop-shadow(0 0 4px #c084fc) drop-shadow(0 0 4px #c084fc) drop-shadow(0 0 4px #c084fc);
+  }
+  99% {
+    filter: drop-shadow(0 0 0) drop-shadow(0 0 0) drop-shadow(0 0 0);
+    color: #c084fc;
+  }
+}
+
+.animate-sparkle-pastel-red {
+  animation: sparkle-pastel-red 0.35s linear;
+}
+.animate-sparkle-pastel-orange {
+  animation: sparkle-pastel-orange 0.35s linear;
+}
+.animate-sparkle-pastel-yellow {
+  animation: sparkle-pastel-yellow 0.35s linear;
+}
+.animate-sparkle-pastel-green {
+  animation: sparkle-pastel-green 0.35s linear;
+}
+.animate-sparkle-pastel-blue {
+  animation: sparkle-pastel-blue 0.35s linear;
+}
+.animate-sparkle-pastel-indigo {
+  animation: sparkle-pastel-indigo 0.35s linear;
+}
+.animate-sparkle-pastel-violet {
+  animation: sparkle-pastel-violet 0.35s linear;
+}
+
+
+
+
+
+
+
+
+
+
+

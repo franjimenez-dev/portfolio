@@ -5,10 +5,8 @@ import Image from "next/image";
 import Portfolio from "@/components/portfolio";
 import Technologies from "@/components/technologies";
 import Link from "next/link";
-import linkedin from "@/public/logos/linkedin.svg";
-import {IoIosMail} from "react-icons/io";
 import AnimatedTextRocket from "@/components/animated-text-rocket";
-import AnimatedName from "@/components/animated-name";
+import AnimatedNameAlt from "@/components/animated-name-alt";
 
 const ProyectsSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio']);
@@ -156,7 +154,7 @@ const ProyectsSection = () => {
                                 </div>
                             </h3>
 
-                            <AnimatedName/>
+                            <AnimatedNameAlt/>
                             <AnimatedTextRocket/>
                             {/*<h2 className={`flex flex-shrink text-xl md:text-3xl lg:text-3xl xl:text-4xl my-2 font-semibold font-mono whitespace-nowrap`}> 🚀*/}
                             {/*    Desarrollador web*/}
