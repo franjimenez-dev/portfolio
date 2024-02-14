@@ -215,6 +215,15 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+
 .button-spark-violet {
   animation: sparkle-violet 0.35s linear;
+}
+
+.button-spark-alt {
+  animation: sparkle 0.35s linear;
+}
+
+.button-spark-violet-alt {
+    animation: sparkle-violet 0.35s linear;
 }

@@ -6,18 +6,18 @@ const AnimatedTextRocket = () => {
     const controls = useAnimation();
     const containerControls = useAnimation();
     const rocketControls = useAnimation();
-    const [sparkIndex, setSparkIndex] = useState(0);
+    const [sparkleIndex, setSparkleIndex] = useState(0);
 
     useEffect(() => {
-        if (sparkIndex >= 0 && sparkIndex < textArray.length) {
-            const timeoutId = setTimeout(() => {
-                setSparkIndex(sparkIndex + 1);
+        if (sparkleIndex >= 0 && sparkleIndex < textArray.length) {
+            setTimeout(() => {
+                setSparkleIndex(sparkleIndex + 1);
             }, 100);
         }
-        if (sparkIndex === textArray.length) {
+        if (sparkleIndex === textArray.length) {
             setIsAnimating(false);
         }
-    }, [sparkIndex]);
+    }, [sparkleIndex]);
     const handleMouseEnter = () => {
         if (isAnimating) return;
 
@@ -50,7 +50,7 @@ const AnimatedTextRocket = () => {
                 containerControls.start({ x: 0, transition: { duration: 1.5 } }).then(() => {
                     rocketControls.start({ rotate: 0, transition: { duration: 0.3 } }).then(() => {
 
-                        setSparkIndex(0);
+                        setSparkleIndex(0);
                     });
                 });
             }, 2500);
@@ -77,7 +77,7 @@ const AnimatedTextRocket = () => {
                 🚀
             </motion.span>
             {textArray.map((char, i) => (
-                <motion.span key={i} custom={i} animate={controls} className={`${i < sparkIndex ? 'button-spark' : ''}`}>
+                <motion.span key={i} custom={i} animate={controls} className={`${i < sparkleIndex ? 'button-spark' : ''}`}>
                     {char === ' ' ? '\u00A0' : char}
                 </motion.span>
             ))}

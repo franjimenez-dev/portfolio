@@ -81,7 +81,7 @@ const ProyectsSection = () => {
                                 >
                                     <span className="relative inline-flex overflow-hidden rounded-full p-[2px]">
                                         <span
-                                            className={`absolute inset-[-1000%] animate-[spin_3s_linear_infinite]${ onHoverAvailable ? ' bg-[conic-gradient(from_90deg_at_50%_50%,#c084fc_0%,#FDE68A_50%,#c084fc_100%)] ' : ' bg-[conic-gradient(from_90deg_at_50%_50%,#FDE68A_0%,#5e4b00_50%,#FDE68A_100%)]'}`}
+                                            className={`absolute inset-[-1000%] animate-[spin_3s_linear_infinite] ${ onHoverAvailable ? 'bg-[conic-gradient(from_90deg_at_50%_50%,#c084fc_0%,#FDE68A_50%,#c084fc_100%)] ' : 'bg-[conic-gradient(from_90deg_at_50%_50%,#c084fc_0%,#FDE68A_50%,#c084fc_100%)]'}`}
                                         />
                                         <Link href={"https://www.linkedin.com/in/franjimenez-dev/"} target={"_blank"}
                                             className={`inline-flex items-center justify-center w-full px-3 py-1 select-none text-sm ${onHoverAvailable ? 'text-[#FDE68A]' : 'text-white'} rounded-full bg-[#010206] cursor-pointer backdrop-blur-3xl whitespace-nowrap`}>
