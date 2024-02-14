@@ -83,13 +83,13 @@ const AnimatedNameAlt = () => {
                     key={index}
                     onHoverStart={() => handleHover(index)}
                     className={`font-bold font-mono text-[#FDE68A]
-                    ${hovered[index] === 'red' ? allColored === 'red' ? 'text-[#FF809F]' : 'text-[#FF809F] animate-sparkle-pastel-red' : ''}
-                    ${hovered[index] === 'orange' ? allColored === 'orange' ? 'text-[#FF9380]' : 'text-[#FF9380] animate-sparkle-pastel-orange' : ''}
-                    ${hovered[index] === 'yellow' ? allColored === 'yellow' ? 'text-[#FFD280]' : 'text-[#FFD280] animate-sparkle-pastel-yellow' : ''}
-                    ${hovered[index] === 'green' ? allColored === 'green' ? 'text-[#C1FF80]' : 'text-[#C1FF80] animate-sparkle-pastel-green' : ''}
-                    ${hovered[index] === 'blue' ? allColored === 'blue' ? 'text-[#66FFFF]' : 'text-[#66FFFF] animate-sparkle-pastel-blue' : ''}
-                    ${hovered[index] === 'indigo' ? allColored === 'indigo' ? 'text-[#666BFF]' : 'text-[#666BFF] animate-sparkle-pastel-indigo' : ''}
-                    ${hovered[index] === 'violet' ? allColored === 'violet' ? 'text-[#c084fc]' : 'text-[#c084fc] animate-sparkle-pastel-violet' : ''}
+                    ${hovered[index] === 'red' ? allColored === 'red' ? 'text-pastel-red' : 'text-pastel-red animate-sparkle-pastel-red' : ''}
+                    ${hovered[index] === 'orange' ? allColored === 'orange' ? 'text-pastel-orange' : 'text-pastel-orange animate-sparkle-pastel-orange' : ''}
+                    ${hovered[index] === 'yellow' ? allColored === 'yellow' ? 'text-pastel-yellow' : 'text-pastel-yellow animate-sparkle-pastel-yellow' : ''}
+                    ${hovered[index] === 'green' ? allColored === 'green' ? 'text-pastel-green' : 'text-pastel-green animate-sparkle-pastel-green' : ''}
+                    ${hovered[index] === 'blue' ? allColored === 'blue' ? 'text-pastel-blue' : 'text-pastel-blue animate-sparkle-pastel-blue' : ''}
+                    ${hovered[index] === 'indigo' ? allColored === 'indigo' ? 'text-pastel-indigo' : 'text-pastel-indigo animate-sparkle-pastel-indigo' : ''}
+                    ${hovered[index] === 'violet' ? allColored === 'violet' ? 'text-pastel-violet' : 'text-pastel-violet animate-sparkle-pastel-violet' : ''}
                     ${sparkIndex === index && allColored === hovered[index] ? `animate-sparkle-pastel-${hovered[index]}` : ''}
                     `}
                 >

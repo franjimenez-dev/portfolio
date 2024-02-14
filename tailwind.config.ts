@@ -23,6 +23,14 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
+        'pastel-red': '#FF809F',
+        'pastel-orange': '#FF9380',
+        'pastel-yellow': '#FFD280',
+        'pastel-green': '#C1FF80',
+        'pastel-blue': '#66FFFF',
+        'pastel-indigo': '#666BFF',
+        'pastel-violet': '#c084fc',
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
