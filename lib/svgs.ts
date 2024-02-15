@@ -21,27 +21,27 @@ import webstorm_logo from '@/public/logos/webstorm.svg';
 import vercel_logo from '@/public/logos/vercel.svg';
 
 const SVGS = [
-    {name: 'CSS', src: css_logo},
-    {name: 'HTML5', src: html5_logo},
-    {name: 'JavaScript', src: javascript_logo},
-    {name: 'TailwindCSS', src: tailwindcss_logo},
-    {name: 'React', src: react_logo},
-    {name: 'PHP', src: php_logo},
-    {name: 'Laravel', src: laravel_logo},
-    {name: 'Next.js', src: nextjs_logo},
-    {name: 'TypeScript', src: typescript_logo},
-    {name: 'Node.js', src: nodejs_logo},
-    {name: 'Express.js', src: express_logo},
-    {name: 'MongoDB', src: mongodb_logo},
-    {name: 'MySQL', src: mysql_logo},
-    {name: 'PostgreSQL', src: postgresql_logo},
-    {name: 'GitHub', src: github_logo},
-    {name: 'AWS S3', src: aws_s3_logo},
-    {name: 'Bash', src: bash_logo},
-    {name: 'GitHub Copilot', src: copilot_logo},
-    {name: 'OpenAI ChatGPT', src: openai_logo},
-    {name: 'WebStorm', src: webstorm_logo},
-    {name: 'Vercel', src: vercel_logo}
+    {name: 'CSS', src: css_logo, url: "https://developer.mozilla.org/es/docs/Web/CSS"},
+    {name: 'HTML5', src: html5_logo, url: "https://developer.mozilla.org/es/docs/Glossary/HTML5"},
+    {name: 'JavaScript', src: javascript_logo, url: "https://developer.mozilla.org/es/docs/Web/JavaScript"},
+    {name: 'TailwindCSS', src: tailwindcss_logo, url: "https://tailwindcss.com/"},
+    {name: 'React', src: react_logo, url: "https://es.react.dev/"},
+    {name: 'PHP', src: php_logo, url: "https://www.php.net/"},
+    {name: 'Laravel', src: laravel_logo, url: "https://laravel.com/"},
+    {name: 'Next.js', src: nextjs_logo, url: "https://nextjs.org/"},
+    {name: 'TypeScript', src: typescript_logo, url: "https://www.typescriptlang.org/"},
+    {name: 'Node.js', src: nodejs_logo, url: "https://nodejs.org/en"},
+    {name: 'Express.js', src: express_logo, url: "https://expressjs.com/"},
+    {name: 'MongoDB', src: mongodb_logo, url: "https://www.mongodb.com"},
+    {name: 'MySQL', src: mysql_logo, url: "https://www.mysql.com/"},
+    {name: 'PostgreSQL', src: postgresql_logo, url: "https://www.postgresql.org/"},
+    {name: 'GitHub', src: github_logo, url: "https://github.com/"},
+    {name: 'AWS S3', src: aws_s3_logo, url: "https://aws.amazon.com/es/s3/"},
+    {name: 'Bash', src: bash_logo, url: "https://www.gnu.org/software/bash/manual/"},
+    {name: 'GitHub Copilot', src: copilot_logo, url: "https://github.com/features/copilot"},
+    {name: 'ChatGPT', src: openai_logo, url: "https://chat.openai.com/"},
+    {name: 'WebStorm', src: webstorm_logo, url: "https://www.jetbrains.com/es-es/webstorm/"},
+    {name: 'Vercel', src: vercel_logo, url: "https://vercel.com/"}
 ];
 
 export default SVGS;

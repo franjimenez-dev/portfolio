@@ -66,7 +66,7 @@ const AnimatedTextRocket = () => {
 
     return (
         <motion.h2
-            className="flex flex-shrink text-xl sm:text-3xl my-2 font-semibold font-mono select-none w-fit h-fit"
+            className="flex flex-shrink text-xl sm:text-4xl my-2 font-semibold font-mono select-none w-fit h-fit "
             onMouseEnter={handleMouseEnter}
             animate={containerControls}
         >
@@ -76,8 +76,9 @@ const AnimatedTextRocket = () => {
             >
                 🚀
             </motion.span>
+
             {textArray.map((char, i) => (
-                <motion.span key={i} custom={i} animate={controls} className={`${i < sparkleIndex ? 'button-spark' : ''}`}>
+                <motion.span key={i} custom={i} animate={controls} className={`${i < sparkleIndex ? 'button-spark ' : ''}`}>
                     {char === ' ' ? '\u00A0' : char}
                 </motion.span>
             ))}
