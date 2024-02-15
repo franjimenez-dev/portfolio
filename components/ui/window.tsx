@@ -51,7 +51,7 @@ const Window: React.FC<WindowProps> = ({children, title}) => {
     }, [isAnimating]);
 
     return (
-        <div className={`w-5/6 ${isClosed ? 'hidden' : ''}`}>
+        <div className={`w-5/6 overflow-hidden ${isClosed ? 'hidden' : ''}`}>
             <div className={"text-[#FDE68A] flex w-full justify-center items-center "}>
                 <div
                     className={` text-3xl text-center mt-12 font-semibold font-mono  ${ roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient'} w-full flex justify-between items-stretch`}>

@@ -1,25 +1,45 @@
 'use client';
 import React from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
+import Window from "@/components/ui/window";
+import Portfolio from "@/components/portfolio";
 
 const ExperienceSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['experiencia']);
 
     return (
-        <section id="experiencia" title="Experiencia" className={"my-5 pt-12"}>
-            <h1 className={"text-4xl mb-4"}> Experiencia </h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
+        <section id="experiencia" title="Experiencia" className={"my-5 pt-12 w-full "}>
+
+            <div className={"flex justify-center mt-10"}>
+                <Window title={"Experiencia.php"}>
+                    <div className={"p-12"}>
+                        <h2 className={"text-3xl font-semibold font-mono text-[#FDE68A] mb-4"}>
+                            Experiencia
+                        </h2>
+                        <p className={"text-xl font-mono"}>
+                            He trabajado en proyectos de desarrollo web, aplicaciones móviles y
+                            aplicaciones de escritorio. He trabajado con tecnologías como React, Next.js,
+                            TailwindCSS, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, PHP, Laravel, entre
+                            otras.
+
+                        </p>
+
+                        <p className={"text-xl font-mono mt-4"}>
+                            También he trabajado con herramientas de desarrollo como GitHub, AWS S3, GitHub Copilot,
+                            ChatGPT, WebStorm, Vercel, entre otras.
+
+                            Me he desempeñado como desarrollador full-stack, desarrollador front-end, desarrollador
+                            back-end, desarrollador móvil, desarrollador de software, entre otros roles.
+                        </p>
+                    </div>
+
+                    <div className={"flex justify-center my-10 w-full"}>
+                        <Portfolio/>
+                    </div>
+                </Window>
+            </div>
         </section>
-    );
+);
 }
 
 

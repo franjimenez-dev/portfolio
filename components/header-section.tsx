@@ -7,6 +7,7 @@ import Technologies from "@/components/technologies";
 import Link from "next/link";
 import AnimatedTextRocket from "@/components/animated-text-rocket";
 import AnimatedNameAlt from "@/components/animated-name-alt";
+import AnimatedName from "@/components/animated-name";
 
 const ProyectsSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio']);
@@ -170,7 +171,7 @@ const ProyectsSection = () => {
                                 </div>
                             </h3>
 
-                            <AnimatedNameAlt/>
+                            <AnimatedName/>
                             <AnimatedTextRocket/>
                             {/*<h2 className={`flex flex-shrink text-xl md:text-3xl lg:text-3xl xl:text-4xl my-2 font-semibold font-mono whitespace-nowrap`}> 🚀*/}
                             {/*    Desarrollador web*/}
@@ -200,9 +201,6 @@ const ProyectsSection = () => {
                     <div className="clear-both"></div>
 
                 </div>
-                {/*<div className={"flex justify-center mt-20 w-full"}>*/}
-                {/*    <Portfolio/>*/}
-                {/*</div>*/}
                 <div className={"flex justify-center mt-20"}>
                     <Technologies/>
                 </div>

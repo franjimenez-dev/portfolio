@@ -7,11 +7,10 @@ import HeaderSection from "@/components/header-section";
 export default function Home() {
 
     return (
-        <div className={"flex flex-col justify-center items-center space-y-16 z-10"}>
+        <div className={"flex flex-col justify-center items-center space-y-16 z-10 mb-20"}>
             <HeaderSection />
             <WorksSection />
             <ExperienceSection />
-            <StudiesSection/>
             <AboutMeSection/>
         </div>
     );

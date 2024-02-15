@@ -1,23 +1,48 @@
 'use client';
 import React from 'react';
 import { useActiveLinkOnScroll } from '@/hooks/useActiveLinkOnScroll';
+import Window from "@/components/ui/window";
 
 const ContactSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['contacto']);
 
     return (
-        <section id="contacto" title="Contacto" className={"my-5"}>
-            <h1 className={"text-4xl mb-4"}>Contacto</h1>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut consequuntur culpa deserunt enim, error itaque magnam maiores minima minus molestias nihil perferendis quibusdam recusandae, saepe tempora totam ullam voluptatum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eius error, excepturi, harum ipsam labore laborum libero mollitia, nisi odio praesentium quas quod ratione repellat sit. Nesciunt optio rerum temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae deserunt exercitationem nam officia quisquam quo sit vitae voluptate voluptates. Explicabo numquam vitae voluptas voluptates. Asperiores blanditiis soluta ut voluptatum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore necessitatibus officia repudiandae. Adipisci cumque cupiditate, distinctio dolorem in ipsa minima, modi molestiae necessitatibus odit perspiciatis, quis repudiandae sequi sint veritatis!
+        <section id="contacto" title="Contacto" className={"my-5 w-full"}>
+            <div className={"flex justify-center mt-10"}>
+                <Window title={"Sobre mi.css"}>
+                    <div className={"p-12"}>
+                        <h2 className={"text-3xl font-semibold font-mono text-[#FDE68A] mb-4"}>
+                            Sobre mí y contacto
+                        </h2>
+                        <p className={"text-xl font-mono"}>
+                            Soy un desarrollador de software con más de 10 años de experiencia en desarrollo web,
+                            aplicaciones móviles y aplicaciones de escritorio. He trabajado con tecnologías como React,
+                            Next.js, TailwindCSS, Node.js, Express.js, MongoDB, MySQL, PostgreSQL, PHP, Laravel, entre
+                            otras.
+                        </p>
+
+                        <div className="flex flex-col mt-8 space-y-4">
+                            <div className="flex justify-between space-x-4">
+                                <div className="w-1/2">
+                                    <label htmlFor="name" className="text-[#FDE68A]">Nombre</label>
+                                    <input type="text" id="name" name="name"
+                                           className="p-2 border-2 border-[#FDE68A] rounded-md bg-transparent text-[#FDE68A] shadow-md w-full"/>
+                                </div>
+                                <div className="w-1/2">
+                                    <label htmlFor="email" className="text-[#FDE68A]">Correo electrónico</label>
+                                    <input type="email" id="email" name="email"
+                                           className="p-2 border-2 border-[#FDE68A] rounded-md bg-transparent text-[#FDE68A] shadow-md w-full"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label htmlFor="message" className="text-[#FDE68A]">Mensaje</label>
+                                <textarea id="message" name="message"
+                                          className="p-2 border-2 border-[#FDE68A] rounded-md bg-transparent text-[#FDE68A] shadow-md w-full"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </Window>
+            </div>
         </section>
     );
 }
