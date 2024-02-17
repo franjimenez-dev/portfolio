@@ -7,8 +7,13 @@ import { motion } from 'framer-motion';
 interface WindowProps {
     children: React.ReactNode;
     title: string;
+    className?: string;
+    minimizeButton?: boolean;
+    maximizeButton?: boolean;
+    closeButton?: boolean;
+    borders?: boolean;
 }
-const Window: React.FC<WindowProps> = ({children, title}) => {
+const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl', minimizeButton = true, maximizeButton = true, closeButton = true, borders= true}) => {
 
     const contentRef = React.useRef<HTMLDivElement>(null);
     const [onHoverMinimize, setOnHoverMinimize] = useState(false);
@@ -54,72 +59,82 @@ const Window: React.FC<WindowProps> = ({children, title}) => {
         <div className={`w-5/6 overflow-hidden ${isClosed ? 'hidden' : ''}`}>
             <div className={"text-[#FDE68A] flex w-full justify-center items-center "}>
                 <div
-                    className={` text-3xl text-center mt-12 font-semibold font-mono  ${ roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient'} w-full flex justify-between items-stretch`}>
+                    className={`mt-12 text-center font-semibold font-mono  ${ borders ? roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient' : ''} w-full flex justify-between items-stretch ${className}`}>
                     <div style={{width: 'max-content'}}></div>
-                    <span className={"gradient-text "}>
+                    <span className={"gradient-text select-none"}>
                         {title}
                     </span>
                     <div className={" text-3xl flex justify-center items-stretch"}
                          style={{width: 'max-content'}}>
-                        <button
-                            className={`w-10 border-l-2 border-[#FDE68A]  flex items-center justify-center `}
-                            onMouseEnter={() => {
-                                setOnHoverMinimize(true)
-                                setHoveringIndex(1);
-                            }}
-                            onMouseLeave={() => setHoveringIndex(-1)}
-                            onClick={() => {
-                                if (isAnimating) return;
-                                if (isMinimized) return;
+                        {minimizeButton && (
+                            <button
+                                className={`w-10 border-l-2 border-[#FDE68A]  flex items-center justify-center `}
+                                onMouseEnter={() => {
+                                    setOnHoverMinimize(true)
+                                    setHoveringIndex(1);
+                                }}
+                                onMouseLeave={() => setHoveringIndex(-1)}
+                                onClick={() => {
+                                    if (isAnimating) return;
+                                    if (isMinimized) return;
 
-                                setIsAnimating(true);
-                                setIsMinimized(true);
-                            }}
-                        >
-                            <FaWindowMinimize className={`w-3 h-3 ${onHoverMinimize && 'animate-glow-low'} ${hoveringIndex === 1 && ' animate-tech'}`}/>
-                        </button>
-                        <button
-                            className={`w-10 border-l-2 border-[#FDE68A]  flex items-center justify-center `}
-                            onMouseEnter={() => {
-                                setOnHoverMaximize(true)
-                                setHoveringIndex(2);
-                            }}
-                            onMouseLeave={() => setHoveringIndex(-1)}
-                            onClick={() => {
-                                if (isAnimating) return;
-                                if (!isMinimized) return;
+                                    setIsAnimating(true);
+                                    setIsMinimized(true);
+                                }}
+                            >
+                                <FaWindowMinimize
+                                    className={`w-3 h-3 ${onHoverMinimize && 'animate-glow-low'} ${hoveringIndex === 1 && ' animate-tech'}`}/>
+                            </button>
+                        )}
+                        {maximizeButton && (
+                            <button
+                                className={`w-10 border-l-2 border-[#FDE68A]  flex items-center justify-center `}
+                                onMouseEnter={() => {
+                                    setOnHoverMaximize(true)
+                                    setHoveringIndex(2);
+                                }}
+                                onMouseLeave={() => setHoveringIndex(-1)}
+                                onClick={() => {
+                                    if (isAnimating) return;
+                                    if (!isMinimized) return;
 
-                                setIsAnimating(true);
-                                setRoundedBorder(false);
-                                setIsMinimized(false);
-                                setBorderVisible(true);
-                            }}
-                        >
-                            <FiMaximize className={`w-5 h-5  ${onHoverMaximize && 'animate-glow-low'} ${hoveringIndex === 2 && ' animate-tech'}`}/>
-                        </button>
-                        <button
-                            className={`w-10 border-l-2 border-[#FDE68A] flex items-center justify-center `}
-                            onMouseEnter={() => {
-                                setOnHoverClose(true)
-                                setHoveringIndex(3);
-                            }}
-                            onMouseLeave={() => setHoveringIndex(-1)}
-                            onClick={() => {
-                                if (isAnimating) return;
-                                if (isClosed) return;
+                                    setIsAnimating(true);
+                                    setRoundedBorder(false);
+                                    setIsMinimized(false);
+                                    setBorderVisible(true);
+                                }}
+                            >
+                                <FiMaximize
+                                    className={`w-5 h-5  ${onHoverMaximize && 'animate-glow-low'} ${hoveringIndex === 2 && ' animate-tech'}`}/>
+                            </button>
+                        )}
 
-                                setIsAnimating(true);
-                                setIsClosed(true)
-                                setIsAnimating(false);
-                            }}
-                        >
-                            <IoClose className={`w-7 h-7 ${onHoverClose && 'animate-glow-low'} ${hoveringIndex === 3 && ' animate-tech'}`}/>
-                        </button>
+                        { closeButton && (
+                            <button
+                                className={`w-10 border-l-2 border-[#FDE68A] flex items-center justify-center `}
+                                onMouseEnter={() => {
+                                    setOnHoverClose(true)
+                                    setHoveringIndex(3);
+                                }}
+                                onMouseLeave={() => setHoveringIndex(-1)}
+                                onClick={() => {
+                                    if (isAnimating) return;
+                                    if (isClosed) return;
+
+                                    setIsAnimating(true);
+                                    setIsClosed(true)
+                                    setIsAnimating(false);
+                                }}
+                            >
+                                <IoClose
+                                    className={`w-7 h-7 ${onHoverClose && 'animate-glow-low'} ${hoveringIndex === 3 && ' animate-tech'}`}/>
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
             <motion.div
-                className={`${borderVisible ? 'not-rounded-top-border-gradient -mt-[2px]' : ''}`}
+                className={`${ borders && borderVisible ? 'not-rounded-top-border-gradient select-none -mt-[2px]' : ''}`}
                 ref={contentRef}
                 initial={{height: "auto"}}
                 animate={{height: isMinimized ? 0 : "auto"}}

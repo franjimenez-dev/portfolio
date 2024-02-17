@@ -2,7 +2,6 @@
 import React, {useEffect, useState} from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
 import Image from "next/image";
-import Portfolio from "@/components/portfolio";
 import Technologies from "@/components/technologies";
 import Link from "next/link";
 import AnimatedTextRocket from "@/components/animated-text-rocket";
