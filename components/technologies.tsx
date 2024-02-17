@@ -39,7 +39,7 @@ const Technologies = () => {
                                 transition={{duration: 0.3}}
                             >
                                 <div onClick={() => handleSVGClick(index)}
-                                     className={`flex justify-center ${hover === index && 'animate-sparkle-double-shadow sparkle-double-shadow'}`}>
+                                     className={`flex justify-center ${hover === index && 'animate-sparkle-double-shadow sparkle-double-shadow cursor-pointer'}`}>
                                     <Image src={svg.src} alt={`${svg.name} logo`} width={200} height={200}
                                            className={"w-10 h-10 sm:w-12 sm:h-12"}/>
                                 </div>
@@ -47,10 +47,12 @@ const Technologies = () => {
                         ))
                     ) : (
                         <>
-                            <div className={"absolute top-6 left-6"}>
+                            <div className={"absolute top-10 left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights-purple"}
+                                 onClick={() => setSelectedSVG(-1)}
+                            >
+                                Volver
                                 <IoReturnDownBackOutline
-                                    onClick={() => setSelectedSVG(-1)}
-                                    className={"w-7 h-7 text-[#FDE68A] font-bold tech-highlights-purple cursor-pointer"}/>
+                                    className={"w-12 h-9 "}/>
                             </div>
                             <motion.div
                                 className={"col-span-2 flex justify-center"}
