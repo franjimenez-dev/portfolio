@@ -18,6 +18,9 @@ const config = {
         "2xl": "1400px",
       },
     },
+    corePlugins: {
+      aspectRatio: false,
+    },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -87,7 +90,7 @@ const config = {
     },
   },
   plugins: [
-      require("tailwindcss-animate"),
+    require("tailwindcss-animate"),
     function({ addUtilities }: Record<string, any>) {
       const newUtilities = {
         '.gradient-border': {
@@ -95,8 +98,9 @@ const config = {
         },
       }
       addUtilities(newUtilities)
-    }
+    },
 
+    require('@tailwindcss/aspect-ratio'),
   ],
 } satisfies Config
 

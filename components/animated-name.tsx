@@ -29,8 +29,6 @@ const AnimatedName = () => {
 
     const handleHover = (index: number) => {
         if (isAnimating) return;
-        console.log(letters[index]);
-        console.log(isAnimating);
         if (letters[index] === ' ') return;
         const newHovered = [...hovered];
         if (allColored !== 'none') {

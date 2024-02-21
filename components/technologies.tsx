@@ -18,8 +18,6 @@ const Technologies = () => {
         setSelectedSVG(index);
     };
 
-    console.log(selectedSVG);
-
     return (
         <Window title={"Tecnologías.tsx"}>
             <div className={"grid grid-cols-2 sm:grid-cols-8 md:grid-cols-5 p-12 justify-center items-center relative"}>

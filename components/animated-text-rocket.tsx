@@ -7,6 +7,9 @@ const AnimatedTextRocket = () => {
     const containerControls = useAnimation();
     const rocketControls = useAnimation();
     const [sparkleIndex, setSparkleIndex] = useState(0);
+    useEffect(() => {
+        setIsAnimating(true);
+    }, []);
 
     useEffect(() => {
         if (sparkleIndex >= 0 && sparkleIndex < textArray.length) {
