@@ -12,7 +12,7 @@ const NavigationLogic: React.FC<NavigationLogicProps> = ({ children }) => {
     return (
         <ActiveLinkContext.Provider value={{ activeLink, setActiveLink }}>
             <Navbar/>
-            <main className={"container"}>
+            <main className={""}>
                 {children}
             </main>
         </ActiveLinkContext.Provider>

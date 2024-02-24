@@ -6,5 +6,6 @@ export type ProjectData = {
     images: (string | StaticImageData)[];
     technologies: string[];
     link: string;
+    logo: string;
     type: 1 | 2;
 }

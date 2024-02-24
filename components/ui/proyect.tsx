@@ -6,9 +6,10 @@ import MyImage from "@/components/ui/my-image";
 
 interface NewProjectProps {
     project: ProjectData;
+    type: number;
 }
 
-const NewProject: React.FC<NewProjectProps> = ({project}) => {
+const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
     const [indexActive, setIndexActive] = useState(0);
 
     const nextImage = () => {
@@ -29,57 +30,67 @@ const NewProject: React.FC<NewProjectProps> = ({project}) => {
         });
     };
     return (
-        <div className={"pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20 relative"}>
+        <>
 
-            <div
-                className={`nc-CardLarge1 nc-CardLarge1--hasAnimation relative flex flex-col-reverse md:flex-row justify-end`}
-            >
-                <div
-                    className="md:absolute z-10 md:start-0 md:top-1/2 md:-translate-y-1/2 w-full -mt-8 md:mt-0 px-3 sm:px-6 md:px-0 md:w-3/5 lg:w-1/2 xl:w-2/5">
+            {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-gradient-low-opacity opacity-5 blur-3xl ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
+            {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-[#010206]/70  my-bg-image  ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
+
+            <div className={"container md:w-screen py-10"}>
+                <div className={"py-2 " +
+                    // " pb-16 md:py-16 lg:pb-28 lg:pt-20 " +
+                    "relative "}>
+
                     <div
-                        className="nc-CardLarge1__left p-4 sm:p-8 xl:py-14 md:px-10 bg-white/40 dark:bg-neutral-900/40 backdrop-filter backdrop-blur-lg shadow-lg dark:shadow-2xl rounded-3xl space-y-3 sm:space-y-5 ">
-                        {/*<CategoryBadgeList categories={categories}/>*/}
+                        className={`nc-CardLarge1 nc-CardLarge1--hasAnimation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
+                    >
+                        <div className="w-full lg:w-4/6 xl:w-2/5 ">
 
-                        <h2 className="nc-card-title text-base sm:text-xl lg:text-2xl font-semibold ">
-                            {project.title}
-                        </h2>
+                            {project.images.map((url, index) => {
+                                if (indexActive !== index) return null;
+                                return (
+                                    <div key={index} className="nc-CardLarge1__right block relative ">
+                                        <MyImage
+                                            containerClassName="aspect-w-16 aspect-h-9 relative "
+                                            className="absolute"
+                                            src={url}
+                                            alt={project.title}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            priority
+                                        />
+                                    </div>
+                                )
+                            })
+                            }
+                        </div>
+                        <div
+                            className={`z-10 -mt-8 lg:px-0 lg:w-[31%] xl:w-[38%] `}>
+                            <div
+                                className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 bg-[#010206]/70 my-bg-image backdrop-filter backdrop-blur-lg">
+                                {/*<CategoryBadgeList categories={categories}/>*/}
+                                <div className={"w-full flex justify-start"}>
+                                    <Image src={project.logo} alt={project.title} width={250} height={100}/>
+                                </div>
 
-                        <div>
-                            <p className="text-sm sm:text-base text-white ">
-                                {project.description}
-                            </p>
+                                <div>
+                                    <p className="text-sm sm:text-base text-white text-pretty "
+                                       dangerouslySetInnerHTML={{__html: project.description}}/></div>
+                                <div
+                                    className={`absolute top-0 right-0 p-4 sm:pt-8 sm:px-10`}>
+                                    <PrevNextButtons
+                                        btnClassName="w-11 h-11 text-xl "
+                                        onClickNext={nextImage}
+                                        onClickPrev={prevImage}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="p-4 sm:pt-8 sm:px-10">
-                        <PrevNextButtons
-                            btnClassName="w-11 h-11 text-xl"
-                            onClickNext={nextImage}
-                            onClickPrev={prevImage}
-                        />
-                    </div>
-                </div>
-                <div className="w-full md:w-4/5 lg:w-2/3">
-
-                    {project.images.map((url, index) => {
-                        if (indexActive !== index) return null;
-                        return (
-                            <div key={index} className="nc-CardLarge1__right block relative">
-                                <MyImage
-                                    containerClassName="aspect-w-16 aspect-h-12 sm:aspect-h-9 md:aspect-h-14 lg:aspect-h-10 2xl:aspect-h-9 relative"
-                                    className="absolute inset-0 object-cover rounded-3xl"
-                                    src={url}
-                                    alt={project.title}
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    priority
-                                />
-                            </div>
-                        )
-                    })
-                    }
                 </div>
             </div>
-        </div>
+
+        </>
+
     );
 };
 

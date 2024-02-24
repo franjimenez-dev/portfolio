@@ -26,7 +26,7 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
                 <button
                     className={`${btnClassName} ${
                         !onlyPrev ? "mr-2" : ""
-                    } border-slate-600 rounded-full flex items-center justify-center ${
+                    } border-slate-600 rounded-full flex items-center justify-center  ${
                         focus === "left" ? "border-2" : ""
                     }`}
                     onClick={(e) => {
