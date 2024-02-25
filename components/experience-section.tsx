@@ -21,7 +21,7 @@ const ExperienceSection = () => {
                                 Agilia Center <FaExternalLinkAlt className={"w-5 h-5 ml-2"}/>
                             </Link>
                         </div>
-                        <p className={"text-sm lg:text-xl font-mono"}>
+                        <p className={"text-sm lg:text-lg font-mono text-pretty"}>
                             Realicé las <span className={"font-bold text-pastel-violet "}>prácticas</span> del grado
                             superior de desarrollo web en <span className={"font-bold text-[#FDE68A]"}>Agilia</span>.
                             En esta empresa utilizé por primera vez un framework de <span
@@ -36,7 +36,7 @@ const ExperienceSection = () => {
 
                         </p>
 
-                        <p className={"text-sm lg:text-xl font-mono mt-4"}>
+                        <p className={"text-sm lg:text-lg font-mono mt-4"}>
                             Durante mi estancia desarrollé una aplicación utilizando el stack <span
                             className={"font-bold text-[#FDE68A]"}>MEAN</span> (MongoDB, Express.js, Angular, Node.js)
                             que permite asignar tareas en un calendario y facilita la comunicación entre compañeros a

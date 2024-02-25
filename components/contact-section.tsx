@@ -16,8 +16,6 @@ const ContactSection = () => {
         <section id="contacto" className={"my-5 w-full md:container"}>
             <div className={"flex justify-center mt-10"}>
                 <div className={"px-8"}>
-
-
                     <div className={"flex justify-center"}>
                         <h2 className={"text-4xl sm:text-5xl lg:text-6xl text-center font-mono font-bold gradient-text w-fit flex items-center"}>
                             <FaUser className={"w-7 h-7 sm:w-12 sm:h-12 lg:w-14 lg:h-14 text-pastel-violet mr-2"}/>
@@ -25,12 +23,10 @@ const ContactSection = () => {
                             <MdAlternateEmail className={"w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16  text-[#FDE68A] ml-1"}/>
                         </h2>
                     </div>
-                    <div className={"flex flex-col-reverse md:flex-row justify-center"}>
-                        <div className={"w-full md:w-2/3 flex justify-center items-center font-mono "}>
+                    <div className={"flex flex-col-reverse md:flex-row justify-center mt-10"}>
+                        <div className={"w-full md:w-2/3 flex justify-center items-center font-mono text-sm md:text-lg text-pretty"}>
                             <div>
-
                                 <p>
-                                    {/*<span className={"text-[#FDE68A] font-semibold"}>PHP</span>*/}
                                     Inicié mi trayectoria en el <span className={"text-[#FDE68A] font-bold"}>Grado Superior en Desarrollo de Aplicaciones Web</span>.
                                     Desde que encontré mi primer bug y lo solucioné supe que quería dedicarme a esto:
                                     vivir convirtiendo cada problema en un nuevo aprendizaje.
@@ -57,12 +53,12 @@ const ContactSection = () => {
                                     <span className={"text-[#FDE68A] font-bold"}> Next.js</span>.
                                 </p>
 
-                                <p className={"mt-3"}>
+                                <p className={"mt-3 hidden lg:block"}>
                                     Aunque este es mi stack de confianza, siempre estoy dispuesto a aprender nuevas tecnologías y a adaptarme a lo que se necesite.
                                 </p>
                             </div>
                         </div>
-                        <div className={"w-full md:w-1/3 flex justify-center mt-4 mb-8 md:mb-0 md:mt-0"}>
+                        <div className={"w-full ml-0 md:ml-8 lg:ml-0 md:w-1/3 flex justify-center mt-4 mb-8 md:mb-0 md:mt-0"}>
                             <Image src={"/testing.png"}
                                    className={"rounded-xl full-rounded-border-gradient w-5/6 sm:w-2/3 md:w-full lg:w-[250px] lg:h-[307px]"}
                                    alt={"imagen fran jimenez"} width={"250"} height={"368"}/>

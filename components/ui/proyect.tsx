@@ -73,7 +73,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 </div>
 
                                 <div>
-                                    <p className="text-sm sm:text-base text-white text-pretty "
+                                    <p className="text-sm sm:text-base md:text-lg text-white text-pretty "
                                        dangerouslySetInnerHTML={{__html: project.description}}/></div>
                                 <div
                                     className={`absolute top-0 right-0 p-4 sm:pt-8 sm:px-10`}>
