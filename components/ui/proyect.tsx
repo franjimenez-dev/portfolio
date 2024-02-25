@@ -49,17 +49,20 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 if (indexActive !== index) return null;
                                 return (
                                     <div key={index} className="nc-CardLarge1__right block relative ">
-                                        <MyImage
-                                            containerClassName="aspect-w-16 aspect-h-9 relative "
-                                            className="absolute"
-                                            src={url}
-                                            alt={project.title}
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            priority
-                                        />
+                                        <a href={project.link} target={"_blank"}>
+
+                                            <MyImage
+                                                containerClassName="aspect-w-16 aspect-h-9 relative "
+                                                className="absolute"
+                                                src={url}
+                                                alt={project.title}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                priority
+                                            />
+                                        </a>
                                     </div>
-                                )
+                            )
                             })
                             }
                         </div>
@@ -69,7 +72,9 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 bg-[#010206]/70 my-bg-image backdrop-filter backdrop-blur-lg">
                                 {/*<CategoryBadgeList categories={categories}/>*/}
                                 <div className={"w-full flex justify-start"}>
-                                    <Image src={project.logo} alt={project.title} width={250} height={100} className={"w-[200px] lg:w-[250px] h-auto"}/>
+                                    <a href={project.link} target={"_blank"}>
+                                        <Image src={project.logo} alt={project.title} width={250} height={100} className={"w-[200px] lg:w-[250px] h-auto"}/>
+                                    </a>
                                 </div>
 
                                 <div>
