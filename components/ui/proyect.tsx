@@ -35,7 +35,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
             {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-gradient-low-opacity opacity-5 blur-3xl ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
             {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-[#010206]/70  my-bg-image  ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
 
-            <div className={"container md:w-screen py-10"}>
+            <div className={"container md:w-full py-10"}>
                 <div className={"py-2 " +
                     // " pb-16 md:py-16 lg:pb-28 lg:pt-20 " +
                     "relative "}>
@@ -69,7 +69,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 bg-[#010206]/70 my-bg-image backdrop-filter backdrop-blur-lg">
                                 {/*<CategoryBadgeList categories={categories}/>*/}
                                 <div className={"w-full flex justify-start"}>
-                                    <Image src={project.logo} alt={project.title} width={250} height={100}/>
+                                    <Image src={project.logo} alt={project.title} width={250} height={100} className={"w-[200px] lg:w-[250px] h-auto"}/>
                                 </div>
 
                                 <div>

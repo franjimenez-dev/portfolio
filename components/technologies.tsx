@@ -19,7 +19,7 @@ const Technologies = () => {
     };
 
     return (
-        <Window title={"Tecnologías.tsx"}>
+        <Window title={"Tecnologías"}>
             <div className={"grid grid-cols-2 sm:grid-cols-8 md:grid-cols-5 p-12 justify-center items-center relative"}>
                 {
                     selectedSVG === -1 ? (

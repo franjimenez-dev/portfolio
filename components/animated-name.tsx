@@ -73,7 +73,7 @@ const AnimatedName = () => {
 
 
     return (
-        <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl select-none">
+        <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-7xl select-none text-nowrap">
             {letters.map((letter, index) => (
                 <motion.span
                     key={index}

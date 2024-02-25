@@ -147,9 +147,9 @@ const Navbar = () => {
     }, [activeLink]);
 
     return (
-        <div className="flex justify-center sticky top-0 md:top-12 sm:text-xl text-white rounded-full z-40">
+        <div className="flex justify-center sticky top-0 lg:top-12 sm:text-xl text-white rounded-full z-40">
             <nav
-                className="rounded-none w-full md:w-fit md:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg backdrop-saturate-150 p-6 absolute top-0 right-0 md:right-20">
+                className="rounded-none w-full lg:w-fit lg:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg backdrop-saturate-150 p-6 absolute top-0 right-0 lg:right-20">
 
                 <div className="line"></div>
 
@@ -188,7 +188,7 @@ const Navbar = () => {
                 >
                     <MdAlternateEmail className={`hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem] ${isContactClicked ? 'contact-animation' : ''}`}/>
 
-                    Contacto
+                    Sobre mí
                 </a>
             </nav>
         </div>
