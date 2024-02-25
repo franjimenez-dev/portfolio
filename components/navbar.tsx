@@ -166,7 +166,7 @@ const Navbar = () => {
                    className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'trabajos' ? 'text-[#FDE68A]' : '') : (activeLink === 'trabajos' ? 'text-[#FDE68A]' : '')} ${isJobClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
                     <FaStar className={`hidden sm:block w-[1.175rem] h-[1.175rem] mb-[0.15rem] mr-[0.1rem] ${isJobClicked ? 'job-animation' : ''}`} />
-                    Trabajos
+                    Proyectos
                 </a>
 
                 <a href="#experiencia" onClick={(e) => handleLinkClick(e, 'experiencia')}
