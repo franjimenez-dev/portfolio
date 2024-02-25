@@ -61,7 +61,7 @@ const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl',
                 <div
                     className={`mt-12 text-center font-semibold font-mono  ${ borders ? roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient' : ''} w-full flex justify-between items-stretch ${className}`}>
                     <div style={{width: 'max-content'}}></div>
-                    <span className={"gradient-text select-none"}>
+                    <span className={"gradient-text select-none text-2xl sm:text-4xl"}>
                         {title}
                     </span>
                     <div className={" text-3xl flex justify-center items-stretch"}

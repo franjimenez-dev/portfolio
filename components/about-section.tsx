@@ -33,6 +33,7 @@ const AboutSection = () => {
                         estar dispuesto a aprender y a adaptarse a las nuevas tecnologías.
                     </span>
             </p>
+            ;
         </div>
     );
 };

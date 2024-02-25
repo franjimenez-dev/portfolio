@@ -415,6 +415,14 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(to right, #c084fc, #FDE68A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.gradient-text-inverse {
+  background: linear-gradient(to left, #c084fc, #FDE68A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .not-rounded-bottom-border-gradient {

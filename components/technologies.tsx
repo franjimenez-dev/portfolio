@@ -20,7 +20,7 @@ const Technologies = () => {
 
     return (
         <Window title={"Tecnologías"}>
-            <div className={"grid grid-cols-2 sm:grid-cols-8 md:grid-cols-5 p-12 justify-center items-center relative"}>
+            <div className={"grid grid-cols-3 sm:grid-cols-5 p-12 justify-center items-center relative"}>
                 {
                     selectedSVG === -1 ? (
                         SVGS.map((svg, index) => (
@@ -45,20 +45,20 @@ const Technologies = () => {
                         ))
                     ) : (
                         <>
-                            <div className={"absolute top-10 left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights-purple"}
+                            <div className={"absolute top-3 sm:top-10 left-4 sm:left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights-purple"}
                                  onClick={() => setSelectedSVG(-1)}
                             >
                                 Volver
                                 <IoReturnDownBackOutline
-                                    className={"w-12 h-9 "}/>
+                                className={"w-9 h-8 sm:w-12 sm:h-9 "}/>
                             </div>
                             <motion.div
-                                className={"col-span-2 flex justify-center"}
+                                className={"col-span-3 flex justify-center"}
                                 initial={{opacity: 0, x: 100}}
                                 animate={{opacity: 1, x: 0}}
                                 transition={{duration: 0.3}}
                             >
-                                <div className={"max-w-lg"}>
+                                <div className={"max-w-lg flex justify-center"}>
                                     <Image src={SVGS[selectedSVG].src} alt={`${SVGS[selectedSVG].name} logo`}
                                            width={200}
                                            height={200}/>
@@ -71,7 +71,7 @@ const Technologies = () => {
                                 transition={{duration: 0.3}}
                             >
                                 <Link href={SVGS[selectedSVG].url}
-                                        className={`flex justify-center items-center w-full text-4xl text-bold mb-4 ${onHoverSelectedTitle && 'animate-glow-low-purple animate-tech-purple'}`}
+                                        className={`flex mt-3 sm:mt-0 justify-center items-center w-full text-4xl text-bold mb-4 ${onHoverSelectedTitle && 'animate-glow-low-purple animate-tech-purple'}`}
                                         onMouseEnter={() => setOnHoverSelectedTitle(true)}
                                         onMouseLeave={() => setOnHoverSelectedTitle(false)}
                                 >
@@ -80,7 +80,7 @@ const Technologies = () => {
                                     <FaExternalLinkAlt className={"w-6 h-6 ml-3"}/>
                                 </Link>
                                 <div className={"flex justify-center"}>
-                                    <span className={" text-lg text-white text-pretty "} dangerouslySetInnerHTML={{ __html: SVGS[selectedSVG].description }} />
+                                    <span className={" text-sm sm:text-base md:text-lg text-white text-pretty "} dangerouslySetInnerHTML={{ __html: SVGS[selectedSVG].description }} />
                                 </div>
                             </motion.div>
                         </>
