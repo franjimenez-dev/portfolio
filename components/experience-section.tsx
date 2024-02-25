@@ -11,8 +11,8 @@ const ExperienceSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['experiencia']);
 
     return (
-        <section id="experiencia" className={"my-5 pt-12 w-full overflow-hidden lg:container"}>
-            <div className={"flex justify-center mt-10"}>
+        <section id="experiencia" className={"my-5 w-full overflow-hidden lg:container"}>
+            <div className={"flex justify-center my-10"}>
                 <Window title={"Experiencia"} minimizeButton={false} maximizeButton={false} closeButton={false}>
                     <div className={"p-12 w-full"}>
                         <div className={"flex items-center mb-4"}>

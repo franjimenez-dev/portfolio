@@ -20,14 +20,14 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
 
     return (
         <div
-            className={`relative flex items-center text-slate-400 ${className}`}
+            className={`relative flex items-center justify-between text-slate-400 ${className}`}
         >
             {!onlyNext && (
                 <button
                     className={`${btnClassName} ${
                         !onlyPrev ? "mr-2" : ""
-                    } border-slate-600 rounded-full flex items-center justify-center  ${
-                        focus === "left" ? "border-2" : ""
+                    } rounded-full flex items-center justify-center ml-2  ${
+                        focus === "left" ? "full-circle-border-gradient" : ""
                     }`}
                     onClick={(e) => {
                         e.preventDefault();
@@ -42,7 +42,7 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
                     >
                         <path
                             d="M9.57 5.92993L3.5 11.9999L9.57 18.0699"
-                            stroke="currentColor"
+                            stroke="#c084fc"
                             strokeWidth="1.5"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -50,7 +50,7 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
                         />
                         <path
                             d="M20.5 12H3.67004"
-                            stroke="currentColor"
+                            stroke="#c084fc"
                             strokeWidth="1.5"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -61,8 +61,8 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
             )}
             {!onlyPrev && (
                 <button
-                    className={`${btnClassName} border-slate-600 rounded-full flex items-center justify-center ${
-                        focus === "right" ? "border-2" : ""
+                    className={`${btnClassName} rounded-full flex items-center justify-center mr-2 ${
+                        focus === "right" ? "full-circle-border-gradient" : ""
                     }`}
                     onClick={(e) => {
                         e.preventDefault();
@@ -78,7 +78,7 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
                     >
                         <path
                             d="M14.4301 5.92993L20.5001 11.9999L14.4301 18.0699"
-                            stroke="currentColor"
+                            stroke="#c084fc"
                             strokeWidth="1.5"
                             strokeMiterlimit="10"
                             strokeLinecap="round"
@@ -86,7 +86,7 @@ const PrevNextButtons: React.FC<PrevNextButtonsProps> = ({
                         />
                         <path
                             d="M3.5 12H20.33"
-                            stroke="currentColor"
+                            stroke="#c084fc"
                             strokeWidth="1.5"
                             strokeMiterlimit="10"
                             strokeLinecap="round"

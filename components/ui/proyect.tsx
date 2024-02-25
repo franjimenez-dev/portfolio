@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ProjectData} from "@/lib/definitions";
 import PrevNextButtons from "@/components/ui/prev-next-buttons";
+import {motion} from "framer-motion";
 import Image from "next/image";
 import MyImage from "@/components/ui/my-image";
 
@@ -11,7 +12,7 @@ interface NewProjectProps {
 
 const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
     const [indexActive, setIndexActive] = useState(0);
-
+    const [isHovering, setIsHovering] = useState(false)
     const nextImage = () => {
         setIndexActive((state) => {
             if (state >= project.images.length - 1) {
@@ -43,11 +44,15 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                     <div
                         className={`nc-CardLarge1 nc-CardLarge1--hasAnimation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
                     >
-                        <div className="w-full lg:w-4/6 xl:w-2/5 ">
+                        <div className="w-full lg:w-4/6 xl:w-2/5 relative"
+                             onMouseEnter={() => setIsHovering(true)}
+                             onMouseLeave={() => setIsHovering(false)}
+                        >
 
                             {project.images.map((url, index) => {
                                 if (indexActive !== index) return null;
                                 return (
+
                                     <div key={index} className="nc-CardLarge1__right block relative ">
                                         <a href={project.link} target={"_blank"}>
 
@@ -62,32 +67,39 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                             />
                                         </a>
                                     </div>
-                            )
+                                )
                             })
                             }
+
+                            <motion.div
+                                initial={{opacity: 0}}
+                                animate={{opacity: isHovering ? 1 : 0}}
+                                transition={{duration: 0.4}}
+                                className={`absolute top-1/2 w-full`}>
+                                {project.images.length > 1 && (
+                                    <PrevNextButtons
+                                        btnClassName="w-11 h-11 text-xl "
+                                        onClickNext={nextImage}
+                                        onClickPrev={prevImage}
+                                    />
+                                )}
+                            </motion.div>
                         </div>
                         <div
                             className={`z-10 -mt-8 lg:px-0 lg:w-[31%] xl:w-[38%] `}>
                             <div
                                 className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 bg-[#010206]/70 my-bg-image backdrop-filter backdrop-blur-lg">
                                 {/*<CategoryBadgeList categories={categories}/>*/}
-                                <div className={"w-full flex justify-start"}>
+                                <div className={"w-full flex justify-start items-center "}>
                                     <a href={project.link} target={"_blank"}>
-                                        <Image src={project.logo} alt={project.title} width={250} height={100} className={"w-[200px] lg:w-[250px] h-auto"}/>
+                                        <Image src={project.logo} alt={project.title} width={250} height={100}
+                                               className={"w-[200px] lg:w-[250px] h-auto"}/>
                                     </a>
                                 </div>
 
                                 <div>
                                     <p className="text-sm sm:text-base lg:text-lg text-white text-pretty "
                                        dangerouslySetInnerHTML={{__html: project.description}}/></div>
-                                <div
-                                    className={`absolute top-0 right-0 p-4 sm:pt-8 sm:px-10`}>
-                                    <PrevNextButtons
-                                        btnClassName="w-11 h-11 text-xl "
-                                        onClickNext={nextImage}
-                                        onClickPrev={prevImage}
-                                    />
-                                </div>
                             </div>
                         </div>
                     </div>
