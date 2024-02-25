@@ -53,7 +53,7 @@ const Technologies = () => {
                                 className={"w-9 h-8 sm:w-12 sm:h-9 "}/>
                             </div>
                             <motion.div
-                                className={"col-span-3 flex justify-center"}
+                                className={"col-span-3 sm:col-span-2 flex justify-center"}
                                 initial={{opacity: 0, x: 100}}
                                 animate={{opacity: 1, x: 0}}
                                 transition={{duration: 0.3}}
