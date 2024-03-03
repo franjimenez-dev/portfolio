@@ -7,7 +7,6 @@ import Link from "next/link";
 import {FaExternalLinkAlt} from "react-icons/fa";
 import {MdKeyboardReturn} from "react-icons/md";
 import {IoReturnDownBackOutline} from "react-icons/io5";
-import AnimacionContinua from "@/components/testeo";
 
 const Technologies = () => {
     const [hover, setHover] = useState(-1);
