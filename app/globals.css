@@ -513,7 +513,6 @@ body::-webkit-scrollbar-thumb {
 
 .gradient-text-animation-tech:hover {
     background: linear-gradient(to right, #c084fc, #FDE68A, #c084fc) repeat;
-    filter: drop-shadow(0 0 1px violet);
     background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -561,8 +560,8 @@ body::-webkit-scrollbar-thumb {
 
 .scroller {
     overflow: hidden;
-    -webkit-mask: linear-gradient(90deg, transparent, black 20%, white 80%, transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
 }
 
 .scroller__inner {
@@ -576,6 +575,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scroller__inner:hover {
+    animation-play-state: paused;
+}
+
+.mi-imagen {
     animation-play-state: paused;
 }
 @keyframes scroll {

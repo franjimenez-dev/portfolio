@@ -50,7 +50,7 @@ const ProyectsSection = () => {
     }, [onHoverLinkedIn, onHoverGitHub, onHoverDiscord, onHoverEmail]);
     return (
         <>
-            <header id="inicio" className={"md:container my-5 pt-16 sm:pt-36 w-full overflow-hidden"}>
+            <header id="inicio" className={"md:container my-5 pt-16 sm:pt-36 w-full overflow-hidden min-h-screen"}>
                 <div className=" flex justify-center items-center mx-2 sm:mx-16">
                     <div className="hidden sm:block shadow-md shadow-[#c084fc] gradient-border p-1 "
                          style={{
@@ -304,9 +304,7 @@ const ProyectsSection = () => {
                     <div className="clear-both"></div>
 
                 </div>
-                <div className={"flex justify-center mt-5 sm:mt-10"}>
-                    <Technologies/>
-                </div>
+                <Technologies navigation={navigateTo}/>
             </header>
         </>
     )

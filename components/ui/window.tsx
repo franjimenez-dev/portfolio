@@ -134,7 +134,7 @@ const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl',
                 </div>
             </div>
             <motion.div
-                className={`${ borders && borderVisible ? 'not-rounded-top-border-gradient select-none -mt-[2px]' : ''}`}
+                className={`p-2 ${ borders && borderVisible ? 'not-rounded-top-border-gradient select-none -mt-[2px]' : ''}`}
                 ref={contentRef}
                 initial={{height: "auto"}}
                 animate={{height: isMinimized ? 0 : "auto"}}
