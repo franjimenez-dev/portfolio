@@ -88,7 +88,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                         <div
                             className={`z-10 -mt-8 lg:px-0 lg:w-[31%] xl:w-[38%] `}>
                             <div
-                                className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 my-bg-image2 rounded-3xl backdrop-filter backdrop-blur-lg">
+                                className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 rounded-3xl ">
                                 {/*<CategoryBadgeList categories={categories}/>*/}
                                 <div className={"w-full flex justify-start items-center "}>
                                     <a href={project.link} target={"_blank"}>

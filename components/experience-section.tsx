@@ -13,7 +13,7 @@ const ExperienceSection = () => {
     return (
         <section id="experiencia" className={"my-5 w-full overflow-hidden lg:container z-10"}>
             <div className={"flex justify-center my-10"}>
-                <Window title={"Experiencia"} minimizeButton={false} maximizeButton={false} closeButton={false} className={"my-bg-image"}>
+                <Window title={"Experiencia"} minimizeButton={false} maximizeButton={false} closeButton={false} className={""}>
                     <div className={"p-12 w-full my-bg-image2"}>
                         <div className={"flex items-center mb-4"}>
                             <Link href={"https://agiliacenter.com"}

@@ -27,11 +27,11 @@ import vercel_logo from '@/public/logos/vercel.svg';
 const SVGS = [
     {
         name: 'CSS',
-        src: css_logo, 
+        src: css_logo,
         url: 'https://developer.mozilla.org/es/docs/Web/CSS',
         description: `He utilizado <a href="https://developer.mozilla.org/es/docs/Web/CSS" class="text-[#FDE68A] font-bold tech-highlights-purple cursor-pointer ">CSS</a> desde que empecé en el mundo del desarrollo web. He aprendido varios <a href="https://es.wikipedia.org/wiki/Framework" target="_blank" class="text-[#c084fc] font-bold tech-highlights cursor-pointer ">frameworks</a> como <a href="https://getbootstrap.com/" target="_blank" class="gradient-text font-bold gradient-text-animation-tech hover:scale-110">Bootstrap</a> y <a href="https://getbootstrap.com/" target="_blank" class="gradient-text font-bold gradient-text-animation-tech">TailwindCSS</a> para agilizar el desarrollo de aplicaciones web. `
 
-    },    {
+    }, {
         name: 'HTML5',
         src: html5_logo,
         url: 'https://developer.mozilla.org/es/docs/Glossary/HTML5',
