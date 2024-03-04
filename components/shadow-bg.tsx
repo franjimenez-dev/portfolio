@@ -14,7 +14,7 @@ const ShadowBg = () => {
     return (
         <>
             <div aria-hidden="true"
-                 className="fixed hidden dark:md:block dark:opacity-70 -bottom-[40%] -left-[20%] z-0 pointer-events-none select-none">
+                 className="fixed hidden md:block opacity-50 -bottom-[40%] -left-[20%] z-0 pointer-events-none select-none">
                 <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isLoaded ? 0.5 : 0 }}
@@ -24,7 +24,7 @@ const ShadowBg = () => {
                     alt="left background"/>
             </div>
             <div aria-hidden="true"
-                 className="fixed hidden dark:md:block dark:opacity-70 -top-[80%] -right-[60%] 2xl:-top-[60%] 2xl:-right-[45%] z-0 rotate-12 pointer-events-none select-none">
+                 className="fixed hidden md:block opacity-50 -top-[80%] -right-[60%] 2xl:-top-[60%] 2xl:-right-[45%] z-0 rotate-12 pointer-events-none select-none">
                 <motion.img
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isLoaded ? 0.5 : 0 }}

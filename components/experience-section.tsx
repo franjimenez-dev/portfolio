@@ -11,10 +11,10 @@ const ExperienceSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['experiencia']);
 
     return (
-        <section id="experiencia" className={"my-5 w-full overflow-hidden lg:container min-h-screen z-10"}>
+        <section id="experiencia" className={"my-5 w-full overflow-hidden lg:container z-10"}>
             <div className={"flex justify-center my-10"}>
                 <Window title={"Experiencia"} minimizeButton={false} maximizeButton={false} closeButton={false} className={"my-bg-image"}>
-                    <div className={"p-12 w-full my-bg-image"}>
+                    <div className={"p-12 w-full my-bg-image2"}>
                         <div className={"flex items-center mb-4"}>
                             <Link href={"https://agiliacenter.com"}
                                   className={"text-2xl lg:text-3xl font-semibold font-mono text-[#FDE68A] flex items-center text-nowrap"}>

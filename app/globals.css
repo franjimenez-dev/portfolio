@@ -80,11 +80,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 .my-bg-image {
-    background-image: url('../public/bg/testeo15.jpg');
+    background-image: url('../public/bg/testeo26.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.my-bg-image2 {
+    background-image: url('../public/bg/testeo27.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#works {
 }
 
 .line {

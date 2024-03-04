@@ -10,7 +10,10 @@ export default function Home() {
     return (
         <div className={"flex flex-col justify-center items-center space-y-16 z-10"}>
             <HeaderSection />
-            <WorksSection />
+            <div className={"relative w-full"}>
+                <div className={"absolute top-0 left-0 w-full h-full z-10 my-bg-image2 py-96"}/>
+                <WorksSection />
+            </div>
             <ExperienceSection />
             <AboutMeSection/>
             <Footer/>
