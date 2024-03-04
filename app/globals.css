@@ -446,7 +446,6 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, #c084fc, #FDE68A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: bold;
 }
 
 .gradient-text-inverse {
@@ -497,14 +496,12 @@ body::-webkit-scrollbar-thumb {
     animation: sparkle-gradient-shadow 0.25s linear;
 }
 
-.tech-highlights-purple:hover {
+.tech-highlights:hover {
+    background: #FDE68A;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #FDE68A;
     animation: sparkle-shine-last-purple 0.35s linear;
     filter: drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 1px #c084fc);
-}
-
-.tech-highlights:hover {
-    animation: sparkle-gradient-shadow 0.35s linear;
-    filter: drop-shadow(0 0 1px rgba(253, 230, 138, 0.5)) drop-shadow(0 0 1px rgba(253, 230, 138, 1)) drop-shadow(0 0 1px rgba(253, 230, 138, 1));
 }
 
 
