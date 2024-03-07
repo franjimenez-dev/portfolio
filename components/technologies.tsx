@@ -27,7 +27,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
 
     return (
         <>
-            <div className={"flex justify-center mt-10"}>
+            <div className={"flex w-full justify-center mt-10"}>
                 <div className={"w-full flex justify-center"}>
                     <div className={"w-5/6 md:w-4/6"}>
                         <div className="container scroller">
@@ -41,7 +41,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                              onClick={() => handleSVGClick(index)}
                                         >
                                             <Image src={element.src} priority={true}
-                                                   className={`w-12 h-12 cursor-pointer ${hover === index ? '' : ' opacity-70 grayscale'}`}
+                                                   className={`w-10 sm:w-12 h-10 sm:h-12 cursor-pointer ${hover === index ? '' : ' opacity-70 grayscale'}`}
                                                    alt={element.name}
                                                    width={20} height={20}/>
                                         </div>
@@ -58,7 +58,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                              onClick={() => handleSVGClick(index)}
                                         >
                                             <Image src={element.src} priority={true}
-                                                   className={`w-12 h-12 cursor-pointer ${hover === index ? '' : ' opacity-70 grayscale'}`}
+                                                   className={`w-10 sm:w-12 h-10 sm:h-12 cursor-pointer ${hover === index ? '' : ' opacity-70 grayscale'}`}
                                                    alt={element.name}
                                                    width={20} height={20}/>
                                         </div>
@@ -70,23 +70,23 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                     </div>
                 </div>
             </div>
-            <div className={"flex justify-center"}>
+            <div className={"flex justify-center "}>
 
                 {selectedSVG !== -1 ?
                     (
-                        <div className={"full-rounded-border-gradient w-5/6 my-bg-image z-10 mt-5"}>
+                        <div className={"full-rounded-border-gradient w-5/6 my-bg-image z-10 mt-5 h-fit"}>
                             <div
-                                className={"grid grid-cols-3 sm:grid-cols-5 p-12 justify-center items-center relative"}>
+                                className={"grid grid-cols-3 lg:grid-cols-5 p-12 justify-center items-center relative"}>
                                 <div
                                     className={"absolute top-3 sm:top-10 left-4 sm:left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights-purple"}
                                     onClick={() => setSelectedSVG(-1)}
                                 >
                                     Volver
                                     <IoReturnDownBackOutline
-                                        className={"w-9 h-8 sm:w-12 sm:h-9 "}/>
+                                        className={"w-9 h-8 md:w-12 md:h-9 "}/>
                                 </div>
                                 <motion.div
-                                    className={"col-span-3 sm:col-span-2 flex justify-center"}
+                                    className={"col-span-3 lg:col-span-2 flex justify-center"}
                                     initial={{opacity: 0, x: 100}}
                                     animate={{opacity: 1, x: 0}}
                                     transition={{duration: 0.3}}
@@ -104,7 +104,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                     transition={{duration: 0.3}}
                                 >
                                     <Link href={SVGS[selectedSVG].url}
-                                          className={`flex mt-3 sm:mt-0 justify-center items-center w-full text-4xl text-bold mb-4 ${onHoverSelectedTitle && 'animate-glow-low-purple animate-tech-purple'}`}
+                                          className={`flex pt-6 lg:pt-0 justify-center items-center w-full text-2xl sm:text-3xl md:text-4xl text-bold mb-4 ${onHoverSelectedTitle && 'animate-glow-low-purple animate-tech-purple'}`}
                                           onMouseEnter={() => setOnHoverSelectedTitle(true)}
                                           onMouseLeave={() => setOnHoverSelectedTitle(false)}
                                     >
@@ -124,7 +124,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                             <div className={"flex justify-center"}>
 
                                 <svg stroke="currentColor" fill="url(#grad1)" strokeWidth="0" viewBox="0 0 256 256"
-                                     className="w-10 h-10 animate-bounce mb-8" height="1em" width="1em"
+                                     className="w-8 h-8 sm:w-10 sm:h-10 animate-bounce mb-8" height="1em" width="1em"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <defs>
                                         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">

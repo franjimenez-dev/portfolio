@@ -10,8 +10,8 @@ const WorksSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['trabajos']);
 
     return (
-        <section id="trabajos"  className={"py-12 w-full z-20 relative min-h-screen"}>
-            <div className={"relative"}>
+        <section id="trabajos"  className={"py-12 w-full z-20 relative min-h-screen flex justiy-center items-center select-none"}>
+            <div className={"relative w-full"}>
                 <div className={"flex justify-center"}>
                     <h2 className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-mono font-bold gradient-text w-fit flex items-center z-20 "}>
                         <AiFillStar className={"w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-pastel-violet mr-2"}/>

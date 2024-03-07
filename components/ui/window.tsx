@@ -56,7 +56,7 @@ const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl',
     }, [isAnimating]);
 
     return (
-        <div className={`w-5/6 overflow-hidden ${isClosed ? 'hidden' : ''}`}>
+        <div className={`w-11/12 overflow-hidden ${isClosed ? 'hidden' : ''}`}>
             <div className={"text-[#FDE68A] flex w-full justify-center items-center "}>
                 <div
                     className={`mt-12 text-center font-semibold font-mono  ${ borders ? roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient' : ''} w-full flex justify-between items-stretch ${className}`}>
@@ -68,7 +68,7 @@ const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl',
                          style={{width: 'max-content'}}>
                         {minimizeButton && (
                             <button
-                                className={`w-10 border-l-2 border-[#FDE68A]  flex items-center justify-center `}
+                                className={`w-10 border-l-2 border-[#FDE68A] flex items-center justify-center `}
                                 onMouseEnter={() => {
                                     setOnHoverMinimize(true)
                                     setHoveringIndex(1);

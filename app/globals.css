@@ -118,6 +118,10 @@ body::-webkit-scrollbar-thumb {
     animation: rainbow 6s linear infinite;
 }
 
+.rainbow-gradient:hover {
+    animation-duration: 1s;
+}
+
 @keyframes rainbow {
     0% {
         background-position: 100% 0%;

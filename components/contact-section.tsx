@@ -14,7 +14,7 @@ const ContactSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['contacto']);
 
     return (
-        <section id="contacto" className={"my-5  w-full md:container"}>
+        <section id="contacto" className={"my-5  w-full md:container select-none"}>
             <div className={"flex justify-center mt-10 mb-20"}>
                 <div className={"px-8 lg:px-0 lg:w-5/6"}>
                     <div className={"flex justify-center"}>
@@ -28,30 +28,35 @@ const ContactSection = () => {
                         <div className={"w-full md:w-8/12 flex justify-center items-center font-mono text-sm sm:text-base lg:text-lg text-pretty"}>
                             <div>
                                 <p>
-                                    Inicié mi trayectoria en el <span className={"text-[#FDE68A] font-bold"}>Grado Superior en Desarrollo de Aplicaciones Web</span>.
+                                    Soy <a href={"https://www.linkedin.com/in/franjimenez-dev/"} target={"_blank"} className={"rainbow-gradient font-bold"}>Fran Jiménez</a>, <a href={"https://www.juntadeandalucia.es/educacion/portals/web/formacion-profesional-andaluza/fp-grado-superior/detalle-titulo?idTitulo=56"} target={"_blank"}
+                                    className={"text-[#FDE68A] font-bold tech-highlights"}>Técnico Superior en Desarrollo de Aplicaciones Web</a>.
                                     Desde que encontré mi primer bug y lo solucioné supe que quería dedicarme a esto:
                                     vivir convirtiendo cada problema en un nuevo aprendizaje.
                                 </p>
                                 <p className={"mt-3"}>
                                     Tengo una base sólida en
-                                    <span className={"text-[#FDE68A] font-bold"}> PHP </span>(<span
-                                    className={"text-[#FDE68A] font-bold"}>+Laravel</span>)
-                                    y buenos conocimientos en <span
-                                    className={"text-[#FDE68A] font-bold"}>bases de datos relacionales</span> (<span
-                                    className={"text-[#FDE68A] font-bold"}>MySQL</span>) y <span
-                                    className={"text-[#FDE68A] font-bold"}>no relacionales</span> (<span
-                                    className={"text-[#FDE68A] font-bold"}>MongoDB</span>).
+                                    <a href={"https://www.php.net/"} target={"_blank"}
+                                       className={"gradient-text font-bold tech-highlights"}> PHP </a>(+<a href={"https://laravel.com/"} target={"_blank"}
+                                    className={"gradient-text-inverse font-bold tech-highlights"}>Laravel</a>)
+                                    y buenos conocimientos en <a href={"https://es.wikipedia.org/wiki/Base_de_datos_relacional"} target={"_blank"}
+                                    className={"text-[#c084fc] font-bold tech-highlights"}>bases de datos relacionales</a> (<a href={"https://www.mysql.com/"} target={"_blank"}
+                                    className={"gradient-text font-bold tech-highlights"}>MySQL</a>) y <a href={"https://www.ibm.com/es-es/topics/nosql-databases"} target={"_blank"}
+                                    className={"text-[#c084fc] font-bold tech-highlights"}>no relacionales</a> (<a href={"https://www.mongodb.com/"} target={"_blank"}
+                                    className={"gradient-text font-bold tech-highlights"}>MongoDB</a>).
                                     Me apasiona el ecosistema de
-                                    <span className={"text-[#FDE68A] font-bold"}> JavaScript</span>, desde lo mas
+                                    <a  href={"https://developer.mozilla.org/es/docs/Web/JavaScript"} target={"_blank"}
+                                        className={"gradient-text font-bold tech-highlights"}> JavaScript</a>, desde lo mas
                                     asentado
                                     en el sector
                                     como
-                                    <span className={"text-[#FDE68A] font-bold"}> Node.js</span>, <span
-                                    className={"text-[#FDE68A] font-bold"}> Express</span> o <span
-                                    className={"text-[#FDE68A] font-bold"}> React</span> hasta las tecnologías mas
+                                    <a href={"https://nodejs.org/"} target={"_blank"}
+                                        className={"gradient-text-inverse tech-highlights font-bold"}> Node.js</a>, <a href={"https://expressjs.com/"} target={"_blank"}
+                                    className={"gradient-text tech-highlights font-bold"}> Express</a> o <a href={"https://reactjs.org/"} target={"_blank"}
+                                    className={"gradient-text-inverse tech-highlights font-bold"}> React</a> hasta las tecnologías mas
                                     modernas
                                     como
-                                    <span className={"text-[#FDE68A] font-bold"}> Next.js</span>.
+                                    <a href={"https://nextjs.org/"} target={"_blank"}
+                                        className={"gradient-text tech-highlights font-bold"}> Next.js</a>.
                                 </p>
 
                                 <p className={"mt-3 hidden lg:block"}>
