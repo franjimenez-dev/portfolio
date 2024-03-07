@@ -50,7 +50,7 @@ const ProyectsSection = () => {
     }, [onHoverLinkedIn, onHoverGitHub, onHoverDiscord, onHoverEmail]);
     return (
         <>
-            <header id="inicio" className={"md:container my-5 pt-32 sm:pt-44 w-full overflow-hidden min-h-screen z-20 select-none"}>
+            <header id="inicio" className={"md:container my-5 pt-32 sm:pt-36 w-full overflow-hidden min-h-screen z-20 select-none"}>
                 <div className=" flex justify-center items-center mx-2 sm:mx-16">
                     <div className="hidden sm:block shadow-md shadow-[#c084fc] gradient-border p-1 "
                          style={{

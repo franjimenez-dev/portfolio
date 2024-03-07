@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 export default function Home() {
 
     return (
-        <div className={"flex flex-col justify-center items-center space-y-16 z-10 select-none"}>
+        <div className={"flex flex-col justify-center items-center z-10 select-none"}>
             <HeaderSection />
             <WorksSection />
             <ExperienceSection />

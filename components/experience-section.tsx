@@ -14,7 +14,7 @@ const ExperienceSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['experiencia']);
 
     return (
-        <section id="experiencia" className={"my-5 w-full overflow-hidden z-10 min-h-screen flex items-center justify-center"}>
+        <section id="experiencia" className={"pt-14 w-full overflow-hidden z-10 min-h-screen flex items-start justify-center"}>
             <div className={"relative w-full"}>
                 <div className={"flex justify-center"}>
                     <h2

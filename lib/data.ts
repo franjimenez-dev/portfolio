@@ -19,7 +19,7 @@ export const timewarp: ProjectData = {
 
 export const metazoa: ProjectData = {
     title: "Metazoa",
-    description: `<a href="https://metazoa.app" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">MetaZoa</a> es una página web en <a href="https://laravel.com" target="_blank" class="gradient-text font-bold tech-highlights">Laravel</a> que facilita la comunicación entre protectoras de animales y personas interesadas en adoptar. La página cuenta con un chat para contactar en tiempo real que utiliza <a href="https://laravel-livewire.com/" target="_blank" class="text-pastel-violet font-bold tech-highlights">Livewire</a> y <a href="https://pushercom" target="_blank" class="gradient-text font-bold tech-highlights">Pusher</a>.`,
+    description: `<a href="https://metazoa.app" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">MetaZoa</a> es una página web en <a href="https://laravel.com" target="_blank" class="gradient-text font-bold tech-highlights">Laravel</a> que facilita la comunicación entre protectoras de animales y personas interesadas en adoptar. La página cuenta con un chat para contactar en tiempo real que utiliza <a href="https://laravel-livewire.com/" target="_blank" class="text-pastel-violet font-bold tech-highlights">Livewire</a> y <a href="https://pusher.com" target="_blank" class="gradient-text font-bold tech-highlights">Pusher</a>.`,
     images: [
         "/projects/metazoa/1.webp",
         // "/projects/metazoa/2.webp",
