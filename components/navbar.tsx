@@ -147,9 +147,9 @@ const Navbar = () => {
     }, [activeLink]);
 
     return (
-        <div className="flex justify-center sticky top-0 lg:top-12 sm:text-xl text-white rounded-full z-40">
+        <div className="flex justify-center sticky top-0 sm:text-xl text-white rounded-full z-40">
             <nav
-                className="rounded-none w-full lg:w-fit lg:rounded-full border flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg  bg-black/90 backdrop-saturate-150 p-6 absolute top-0 right-0 lg:right-20 ">
+                className="rounded-none w-full border-b flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg bg-black/90 backdrop-saturate-150 p-6 absolute top-0 lg:space-x-6">
 
                 <div className="line"></div>
 

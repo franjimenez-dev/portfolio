@@ -10,7 +10,7 @@ const WorksSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['trabajos']);
 
     return (
-        <section id="trabajos"  className={"py-14 w-full z-20 relative min-h-screen flex justify-center items-start select-none"}>
+        <section id="trabajos"  className={"py-20 w-full z-20 relative min-h-screen flex justify-center items-start select-none"}>
             <div className={"relative w-full"}>
                 <div className={"flex justify-center"}>
                     <h2 className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-mono font-bold gradient-text w-fit flex items-center z-20 "}>

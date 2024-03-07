@@ -65,7 +65,7 @@ const HeaderSection = () => {
                                 alt="Avatar"
                                 width={200}
                                 height={200}
-                                className="w-[120px] md:w-[200px] h-[120px] md:h-[200px] rounded-full select-none"
+                                className="rounded-full select-none"
                             />
                     </div>
                     <div className="">
