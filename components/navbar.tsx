@@ -175,7 +175,7 @@ const Navbar = () => {
                 >
                     <FaBriefcase className={`hidden sm:block w-[1.15rem] h-[1.15rem] mb-[0.15rem] mr-[0.275rem] ${isExperienceClicked ? 'experience-animation' : ''}`} />
 
-                    Experiencia
+                    Trayectoria
                 </a>
 
                 {/*<a href="#estudios" onClick={(e) => handleLinkClick(e, 'estudios')}*/}

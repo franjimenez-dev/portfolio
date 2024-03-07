@@ -3,6 +3,9 @@ import {FaWindowMinimize} from "react-icons/fa";
 import {FiMaximize} from "react-icons/fi";
 import {IoClose} from "react-icons/io5";
 import { motion } from 'framer-motion';
+import {AiFillStar} from "react-icons/ai";
+import {PiBooks} from "react-icons/pi";
+import {FaBriefcase} from "react-icons/fa6";
 
 interface WindowProps {
     children: React.ReactNode;
@@ -61,8 +64,10 @@ const Window: React.FC<WindowProps> = ({children, title, className = 'text-3xl',
                 <div
                     className={`mt-12 text-center font-semibold font-mono  ${ borders ? roundedBorder ? 'full-rounded-border-gradient' : 'not-rounded-bottom-border-gradient' : ''} w-full flex justify-between items-stretch ${className}`}>
                     <div style={{width: 'max-content'}}></div>
-                    <span className={"gradient-text select-none text-2xl sm:text-4xl"}>
+                    <span className={"flex justify-center items-center gradient-text select-none text-3xl sm:text-4xl md:text-5xl lg:text-5xl p-0 sm:p-1 lg:p-2"}>
+                        <PiBooks className={"w-8 h-8 sm:w-9 sm:h-9 md:w-12 md:h-12 text-pastel-violet mr-1"}/>
                         {title}
+                        <FaBriefcase className={"w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#FDE68A] ml-2"}/>
                     </span>
                     <div className={" text-3xl flex justify-center items-stretch"}
                          style={{width: 'max-content'}}>

@@ -14,7 +14,7 @@ const ContactSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['contacto']);
 
     return (
-        <section id="contacto" className={"my-5  w-full md:container select-none"}>
+        <section id="contacto" className={"py-20  w-full md:container select-none"}>
             <div className={"flex justify-center mt-10 mb-20"}>
                 <div className={"px-8 lg:px-0 lg:w-5/6"}>
                     <div className={"flex justify-center"}>

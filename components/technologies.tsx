@@ -78,7 +78,7 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                             <div
                                 className={"grid grid-cols-3 lg:grid-cols-5 p-12 justify-center items-center relative"}>
                                 <div
-                                    className={"absolute top-3 sm:top-10 left-4 sm:left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights-purple"}
+                                    className={"absolute top-3 sm:top-10 left-4 sm:left-10 grid justify-center items-center text-[#FDE68A] font-bold font-mono cursor-pointer tech-highlights"}
                                     onClick={() => setSelectedSVG(-1)}
                                 >
                                     Volver
@@ -92,9 +92,11 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                     transition={{duration: 0.3}}
                                 >
                                     <div className={"max-w-lg flex justify-center"}>
-                                        <Image src={SVGS[selectedSVG].src} alt={`${SVGS[selectedSVG].name} logo`}
-                                               width={200}
-                                               height={200}/>
+                                        <a href={SVGS[selectedSVG].url} target={"_blank"} className={"tech-highlights"}>
+                                            <Image src={SVGS[selectedSVG].src} alt={`${SVGS[selectedSVG].name} logo`}
+                                                   width={200}
+                                                   height={200}/>
+                                        </a>
                                     </div>
                                 </motion.div>
                                 <motion.div
@@ -103,15 +105,19 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                     animate={{opacity: 1, x: 0}}
                                     transition={{duration: 0.3}}
                                 >
-                                    <Link href={SVGS[selectedSVG].url}
-                                          className={`flex pt-6 lg:pt-0 justify-center items-center w-full text-2xl sm:text-3xl md:text-4xl text-bold mb-4 ${onHoverSelectedTitle && 'animate-glow-low-purple animate-tech-purple'}`}
-                                          onMouseEnter={() => setOnHoverSelectedTitle(true)}
-                                          onMouseLeave={() => setOnHoverSelectedTitle(false)}
-                                    >
+                                    <div className={"w-full flex justify-center"}>
 
-                                        {SVGS[selectedSVG].name}
-                                        <FaExternalLinkAlt className={"w-6 h-6 ml-3"}/>
-                                    </Link>
+                                        <Link href={SVGS[selectedSVG].url}
+                                              target={"_blank"}
+                                              className={`flex pt-6 lg:pt-0 justify-center items-center text-2xl sm:text-3xl md:text-4xl text-bold mb-4 tech-highlights w-fit`}
+                                              onMouseEnter={() => setOnHoverSelectedTitle(true)}
+                                              onMouseLeave={() => setOnHoverSelectedTitle(false)}
+                                        >
+
+                                            {SVGS[selectedSVG].name}
+                                            <FaExternalLinkAlt className={"w-6 h-6 ml-3"}/>
+                                        </Link>
+                                    </div>
                                     <div className={"flex justify-center"}>
                                     <span className={" text-sm sm:text-base md:text-lg text-white text-pretty "}
                                           dangerouslySetInnerHTML={{__html: SVGS[selectedSVG].description}}/>

@@ -435,14 +435,7 @@ body::-webkit-scrollbar-thumb {
     transition: border-radius 0.25s ease;
 }
 
-
-.full-rounded-border-gradient-low-opacity {
-    border: 2px solid;
-    border-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='104' height='104' fill='none'%3e%3cpath stroke='url(%23a)' stroke-width='2' d='M10 1a9 9 0 0 0-9 9v84a9 9 0 0 0 9 9h84a9 9 0 0 0 9-9V10a9 9 0 0 0-9-9H10Z'/%3e%3cdefs%3e%3clinearGradient id='a' x1='2' x2='61.49' y1='102' y2='109.993' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='rgba(192, 132, 252, 0.2)'/%3e%3cstop offset='1' stop-color='rgba(253, 230, 138, 0.2)'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e") 8 / 8px stretch;
-}
-
 .full-circle-border-gradient {
-    border: 2px solid;
     border-image: url("data:image/svg+xml,%3csvg width='110' height='110' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.5 55c0 28.995 23.505 52.5 52.5 52.5s52.5-23.505 52.5-52.5S83.995 2.5 55 2.5 2.5 26.005 2.5 55Z' stroke='url(%23a)' stroke-width='5'/%3e%3cdefs%3e%3clinearGradient id='a' x1='5' y1='105' x2='64.49' y2='112.993' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23C084FC'/%3e%3cstop offset='1' stop-color='%23FDE68A'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e") 20 / 8px stretch;
 }
 
@@ -506,6 +499,23 @@ body::-webkit-scrollbar-thumb {
     -webkit-text-fill-color: #FDE68A;
     animation: sparkle-shine-last-purple 0.35s linear;
     filter: drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 1px #c084fc);
+}
+
+@keyframes sparkle-gradient-prevnext {
+    0% {
+        filter: drop-shadow(0 0 0);
+    }
+    50% {
+        filter: drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 1px #c084fc) drop-shadow(0 0 2px #FDE68A) drop-shadow(0 0 1px #FDE68A) drop-shadow(0 0 2px #c084fc);
+    }
+    100% {
+        filter: drop-shadow(0 0 2px #c084fc) drop-shadow(0 0 2px #c084fc) drop-shadow(0 0 4px #FDE68A) drop-shadow(0 0 2px #FDE68A) drop-shadow(0 0 4px #c084fc);
+    }
+}
+
+.prevnext-buttons:hover {
+    animation: sparkle-gradient-prevnext 0.15s linear;
+    filter: drop-shadow(0 0 2px #c084fc) drop-shadow(0 0 2px #c084fc) drop-shadow(0 0 4px #FDE68A) drop-shadow(0 0 2px #FDE68A) drop-shadow(0 0 4px #c084fc);
 }
 
 

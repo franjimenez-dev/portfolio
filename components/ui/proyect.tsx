@@ -4,6 +4,8 @@ import PrevNextButtons from "@/components/ui/prev-next-buttons";
 import {motion} from "framer-motion";
 import Image from "next/image";
 import MyImage from "@/components/ui/my-image";
+import PrevButton from "@/components/ui/prev-button";
+import NextButton from "@/components/ui/next-button";
 
 interface NewProjectProps {
     project: ProjectData;
@@ -12,7 +14,6 @@ interface NewProjectProps {
 
 const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
     const [indexActive, setIndexActive] = useState(0);
-    const [isHovering, setIsHovering] = useState(false)
     const nextImage = () => {
         setIndexActive((state) => {
             if (state >= project.images.length - 1) {
@@ -45,8 +46,6 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                         className={`nc-CardLarge1 nc-CardLarge1--hasAnimation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
                     >
                         <div className="w-full lg:w-4/6 xl:w-2/5 relative"
-                             onMouseEnter={() => setIsHovering(true)}
-                             onMouseLeave={() => setIsHovering(false)}
                         >
 
                             {project.images.map((url, index) => {
@@ -71,19 +70,20 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                             })
                             }
 
-                            <motion.div
-                                initial={{opacity: 0}}
-                                animate={{opacity: isHovering ? 1 : 0}}
-                                transition={{duration: 0.4}}
-                                className={`absolute top-1/2 w-full`}>
-                                {project.images.length > 1 && (
-                                    <PrevNextButtons
-                                        btnClassName="w-11 h-11 text-xl "
-                                        onClickNext={nextImage}
-                                        onClickPrev={prevImage}
-                                    />
-                                )}
-                            </motion.div>
+                            {project.images.length > 1 && (
+                                <>
+                                    <div
+                                        className={`absolute top-1/2 left-2`}>
+                                        <PrevButton btnClassName="w-11 h-11 text-xl " onClickPrev={prevImage}/>
+
+                                    </div>
+                                    <div
+                                        className={`absolute top-1/2 right-2`}>
+                                        <NextButton btnClassName="w-11 h-11 text-xl " onClickNext={prevImage}/>
+
+                                    </div>
+                                </>
+                            )}
                         </div>
                         <div
                             className={`z-10 -mt-8 lg:px-0 lg:w-[31%] xl:w-[38%] `}>
