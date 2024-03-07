@@ -66,7 +66,7 @@ const ContactSection = () => {
                         </div>
                         <div className={"w-full ml-0 md:ml-8 lg:ml-0 md:w-4/12 flex justify-center mt-4 mb-8 md:mb-0 md:mt-0"}>
                             <Image src={"/testing.png"}
-                                   className={"rounded-xl full-rounded-border-gradient w-4/6 sm:w-auto sm:h-full lg:w-[250px] lg:h-[307px]"}
+                                   className={"rounded-xl full-rounded-border-gradient w-5/6 sm:w-auto sm:h-full lg:w-[250px] lg:h-[307px]"}
                                    alt={"imagen fran jimenez"} width={"250"} height={"368"}/>
                         </div>
                     </div>
