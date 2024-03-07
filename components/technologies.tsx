@@ -95,7 +95,9 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                         <a href={SVGS[selectedSVG].url} target={"_blank"} className={"tech-highlights"}>
                                             <Image src={SVGS[selectedSVG].src} alt={`${SVGS[selectedSVG].name} logo`}
                                                    width={200}
-                                                   height={200}/>
+                                                   height={200}
+                                                   className={"w-[100px] h-[100px] lg:w-[200px] lg:h-[200px]"}
+                                            />
                                         </a>
                                     </div>
                                 </motion.div>
