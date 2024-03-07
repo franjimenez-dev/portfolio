@@ -16,7 +16,7 @@ const ContactSection = () => {
     return (
         <section id="contacto" className={"pt-20 pb-14 w-full md:container select-none flex items-start justify-center"}>
             <div className={"flex justify-center mb-20"}>
-                <div className={"px-8 lg:px-0 lg:w-5/6"}>
+                <div className={"px-9 lg:px-0 lg:w-5/6"}>
                     <div className={"flex justify-center"}>
                         <h2 className={"text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-mono font-bold gradient-text w-fit flex items-center"}>
                             <FaUser className={"w-7 h-7 sm:w-12 sm:h-12 lg:w-14 lg:h-14 text-pastel-violet mr-2"}/>
@@ -66,7 +66,7 @@ const ContactSection = () => {
                         </div>
                         <div className={"w-full ml-0 md:ml-8 lg:ml-0 md:w-4/12 flex justify-center mt-4 mb-8 md:mb-0 md:mt-0"}>
                             <Image src={"/testing.png"}
-                                   className={"rounded-xl full-rounded-border-gradient w-5/6 sm:w-2/3 md:w-full lg:w-[250px] lg:h-[307px]"}
+                                   className={"rounded-xl full-rounded-border-gradient w-full lg:w-[250px] lg:h-[307px]"}
                                    alt={"imagen fran jimenez"} width={"250"} height={"368"}/>
                         </div>
                     </div>
