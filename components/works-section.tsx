@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
-import NewProject from "@/components/ui/proyect";
+import NewProject from "@/components/ui/project";
 import {timewarp} from "@/lib/data";
 import {metazoa} from "@/lib/data";
 import {AiFillStar} from "react-icons/ai";

@@ -25,7 +25,7 @@ const ExperienceSection = () => {
                     </h2>
                 </div>
                 <div className={" w-full flex justify-center mt-10 container"}>
-                    <div className={"full-rounded-border-gradient my-bg-image2"}>
+                    <div className={"full-rounded-border-gradient my-bg-image"}>
                         <div className={"px-6 sm:px-12 w-full mt-8 lg:mt-10"}>
                             <div className={"flex items-center mb-4"}>
                                 <Link

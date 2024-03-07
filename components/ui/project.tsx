@@ -93,7 +93,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 <div className={"w-full flex justify-start items-center "}>
                                     <a href={project.link} target={"_blank"}>
                                         <Image src={project.logo} alt={project.title} width={250} height={100}
-                                               className={"w-[200px] lg:w-[250px] h-auto"}/>
+                                               className={"w-[150px] md:w-[200px] lg:w-[250px] h-auto"}/>
                                     </a>
                                 </div>
 

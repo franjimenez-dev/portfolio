@@ -8,7 +8,7 @@ import AnimatedTextRocket from "@/components/animated-text-rocket";
 import AnimatedNameAlt from "@/components/animated-name-alt";
 import AnimatedName from "@/components/animated-name";
 
-const ProyectsSection = () => {
+const HeaderSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio']);
     const [onHoverAvailable, setOnHoverAvailable] = useState(false);
     const [onHoverLinkedIn, setOnHoverLinkedIn] = useState(false);
@@ -311,4 +311,4 @@ const ProyectsSection = () => {
         ;
 };
 
-export default ProyectsSection;
+export default HeaderSection;
