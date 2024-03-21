@@ -17,7 +17,6 @@ const Navbar = () => {
         inicio: useRef(null),
         trabajos: useRef(null),
         experiencia: useRef(null),
-        // estudios: useRef(null),
         contacto: useRef(null),
     };
 
@@ -152,13 +151,11 @@ const Navbar = () => {
                 className="rounded-none w-full border-b flex h-[3rem] py-6 sm:py-0 z-40 items-center justify-center backdrop-blur-lg bg-black/90 backdrop-saturate-150 p-6 absolute top-0 lg:space-x-6">
 
                 <div className="line"></div>
-
                 <a href="/" onClick={(e) => handleLinkClick(e, 'inicio')}
                    ref={linkRefs.inicio}
                    className={`font-semibold flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'inicio' ? 'text-[#FDE68A]' : '') : (activeLink === 'inicio' ? 'text-[#FDE68A]' : '')} ${isHomeClicked ? 'active text-[#FDE68A]' : ''}`}
                 >
                     <HiMiniHome className={`hidden sm:block w-5 h-5 mb-[0.15rem] mr-[0.1rem] ${isHomeClicked ? 'home-animation' : ''}`} />
-
                     Inicio
                 </a>
                 <a href="#trabajos" onClick={(e) => handleLinkClick(e, 'trabajos')}
@@ -177,11 +174,6 @@ const Navbar = () => {
 
                     Trayectoria
                 </a>
-
-                {/*<a href="#estudios" onClick={(e) => handleLinkClick(e, 'estudios')}*/}
-                {/*   ref={linkRefs.estudios}*/}
-                {/*   className={clickedLink !== '' ? (clickedLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold') : (activeLink === 'estudios' ? 'rainbow-gradient font-semibold ml-3 ' : '  ml-3 font-semibold')}>Estudios</a>*/}
-
                 <a href="#contacto" onClick={(e) => handleLinkClick(e, 'contacto')}
                    ref={linkRefs.contacto}
                    className={`font-semibold ml-4 md:ml-6 lg:ml-4 flex justify-start items-center ${clickedLink !== '' ? (clickedLink === 'contacto' ? 'text-[#FDE68A]' : '') : (activeLink === 'contacto' ? 'text-[#FDE68A]' : '')} ${isContactClicked ? 'active text-[#FDE68A]' : ''}`}

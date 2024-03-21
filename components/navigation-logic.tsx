@@ -18,6 +18,7 @@ const NavigationLogic: React.FC<NavigationLogicProps> = ({ children }) => {
             </main>
         </ActiveLinkContext.Provider>
     );
+
 };
 
 export default NavigationLogic;

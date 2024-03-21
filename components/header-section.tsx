@@ -5,8 +5,9 @@ import Image from "next/image";
 import Technologies from "@/components/technologies";
 import Link from "next/link";
 import AnimatedTextRocket from "@/components/animated-text-rocket";
-import AnimatedNameAlt from "@/components/animated-name-alt";
+// import AnimatedNameAlt from "@/components/animated-name-alt";
 import AnimatedName from "@/components/animated-name";
+import AnimatedNameAlt from "@/components/animated-name-alt";
 
 const HeaderSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['inicio']);
@@ -171,10 +172,8 @@ const HeaderSection = () => {
                             </h3>
 
                             <AnimatedName/>
+                            {/*<AnimatedNameAlt/>*/}
                             <AnimatedTextRocket/>
-                            {/*<h2 className={`flex flex-shrink text-xl md:text-3xl lg:text-3xl xl:text-4xl my-2 font-semibold font-mono whitespace-nowrap`}> 🚀*/}
-                            {/*    Desarrollador web*/}
-                            {/*</h2>*/}
                         </div>
                         <div className={"visible sm:hidden flex justify-start items-center sm:flex-none"}>
 

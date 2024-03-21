@@ -22,6 +22,7 @@ const AnimatedTextRocket = () => {
         }
     }, [sparkleIndex]);
     const handleMouseEnter = () => {
+
         if (isAnimating) return;
 
         setIsAnimating(true);

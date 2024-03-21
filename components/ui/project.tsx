@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {ProjectData} from "@/lib/definitions";
-import PrevNextButtons from "@/components/ui/prev-next-buttons";
-import {motion} from "framer-motion";
 import Image from "next/image";
 import MyImage from "@/components/ui/my-image";
 import PrevButton from "@/components/ui/prev-button";
@@ -43,7 +41,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                     "relative "}>
 
                     <div
-                        className={`nc-CardLarge1 nc-CardLarge1--hasAnimation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
+                        className={`card-animation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
                     >
                         <div className="w-full lg:w-4/6 xl:w-2/5 relative"
                         >
@@ -52,7 +50,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                                 if (indexActive !== index) return null;
                                 return (
 
-                                    <div key={index} className="nc-CardLarge1__right block relative ">
+                                    <div key={index} className="card-right block relative ">
                                         <a href={project.link} target={"_blank"}>
 
                                             <MyImage
@@ -88,7 +86,7 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
                         <div
                             className={`z-10 -mt-8 lg:px-0 lg:w-[31%] xl:w-[38%] `}>
                             <div
-                                className="nc-CardLarge1__left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 rounded-3xl ">
+                                className="card-left p-4 sm:p-8 lg:py-14 md:px-10 space-y-3 sm:space-y-5 rounded-3xl ">
                                 {/*<CategoryBadgeList categories={categories}/>*/}
                                 <div className={"w-full flex justify-start items-center "}>
                                     <a href={project.link} target={"_blank"}>

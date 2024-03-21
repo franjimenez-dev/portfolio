@@ -28,6 +28,7 @@ const WorksSection = () => {
             </div>
         </section>
     );
+
 };
 
 export default WorksSection;

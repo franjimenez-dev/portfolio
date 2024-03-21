@@ -12,11 +12,13 @@ const MyImage: FC<MyImageProps> = ({
    sizes = "(max-width: 600px) 480px, 800px",
    ...args
 }) => {
+
     return (
         <div className={`${containerClassName}`}>
             <Image className={`${className}  `} alt={`imagen ${alt}`} sizes={sizes} {...args} />
         </div>
     );
+
 };
 
 export default MyImage;

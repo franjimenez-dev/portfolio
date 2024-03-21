@@ -27,6 +27,7 @@ const AnimatedNameAlt = () => {
         indigo: 0,
         violet: 0,
     });
+
     const [sparkIndex, setSparkIndex] = useState(-3);
     const isAnimating = useRef(false);
 

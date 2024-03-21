@@ -21,7 +21,6 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
 
     useEffect(() => {
         if (!Array.isArray(ids)) {
-            console.error('ids must be an array');
             return;
         }
 
@@ -33,7 +32,7 @@ export const useActiveLinkOnScroll = (ids: string[]) => {
                     const rect = element.getBoundingClientRect();
                     const nextElement = ids[index + 1] ? document.getElementById(ids[index + 1]) : null;
                     const nextRect = nextElement ? nextElement.getBoundingClientRect() : null;
-                    const offset = 300; // Adjust this value to change when the section change is triggered
+                    const offset = 300;
                     if (id === 'inicio' && nextRect && nextRect.top > offset) {
                         currentLink = id;
                     } else if ((rect.top <= offset && (!nextRect || nextRect.top > offset)) || (index === ids.length - 1 && rect.bottom <= window.innerHeight)) {

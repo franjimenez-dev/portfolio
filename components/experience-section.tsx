@@ -1,14 +1,10 @@
 'use client';
 import React from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
-import Window from "@/components/ui/window";
-import Portfolio from "@/components/portfolio";
-import Image from "next/image";
 import {FaExternalLinkAlt} from "react-icons/fa";
 import Link from "next/link";
 import {PiBooks} from "react-icons/pi";
 import {FaBriefcase} from "react-icons/fa6";
-import {AiFillStar} from "react-icons/ai";
 
 const ExperienceSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['experiencia']);
@@ -41,7 +37,7 @@ const ExperienceSection = () => {
                                 className={"font-bold text-pastel-violet tech-highlights"}>D.A.W.</a> en <a
                                 href={"https://ieslaarboleda.es/"} target={"_blank"}
                                 className={"font-bold text-[#FDE68A] tech-highlights"}>I.E.S. La Arboleda</a>.
-                                Aquí aprendí desde 0 lenguajes como <a href={"https://php.net/"} target={"_blank"}
+                                Aquí aprendí desde cero lenguajes como <a href={"https://php.net/"} target={"_blank"}
                                                                        className={"font-bold gradient-text tech-highlights"}>PHP</a> y <a
                                 href={"https://ieslaarboleda.es/"} target={"_blank"}
                                 className={"font-bold gradient-text-inverse tech-highlights"}>JavaScript</a>, y utilicé

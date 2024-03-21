@@ -1,6 +1,7 @@
 import css_logo from '@/public/logos/css.svg';
 import html5_logo from '@/public/logos/html5.svg';
 import javascript_logo from '@/public/logos/javascript.svg';
+import python_logo from '@/public/logos/python.svg';
 import react_logo from '@/public/logos/react.svg';
 import php_logo from '@/public/logos/php.svg';
 import laravel_logo from '@/public/logos/laravel.svg';
@@ -17,12 +18,8 @@ import aws_s3_logo from '@/public/logos/aws-s3.svg';
 import bash_logo from '@/public/logos/bash.svg';
 import copilot_logo from '@/public/logos/copilot.svg';
 import openai_logo from '@/public/logos/openai.svg';
-import webstorm_logo from '@/public/logos/webstorm.svg';
 import vercel_logo from '@/public/logos/vercel.svg';
 
-// type 1 <a href="url" target="_blank" class="text-[#FDE68A] font-bold tech-highlights cursor-pointer">{tecnologia}</a>
-// type 2 <a href="url" target="_blank" class="text-[#c084fc] font-bold tech-highlights cursor-pointer ">{tecnologia}</a>
-// type 3 <a href="url" target="_blank" class="gradient-text tech-highlights font-bold">{tecnologia}</a>
 
 const SVGS = [
     {
@@ -92,6 +89,12 @@ const SVGS = [
         description: `<a href="https://nextjs.org/docs" target="_blank" class="text-[#FDE68A] font-bold tech-highlights cursor-pointer">Next.js</a> es mi mayor descubrimiento del 2023 y mi framework preferido. En Next.js desarrollé mi página web <a href="https://timewarp.es" target="_blank" class="text-[#c084fc] font-bold tech-highlights cursor-pointer">Timewarp</a> y también éste portfolio. Las ventajas que ofrece Next.js como el <a href="https://medium.com/swlh/server-side-rendering-with-next-js-56f84f98f9bd" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">server side rendering</a>, las <a href="https://nextjs.org/docs/app/building-your-application/optimizing" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">optimizaciones de rendimiento</a> y <a href="https://nextjs.org/docs/app/building-your-application/optimizing/metadata" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">SEO</a> lo convierten en un framework excepcional. He utilizado paquetes como <a href="https://next-auth.js.org/" target="_blank" class="text-[#c084fc] font-bold tech-highlights cursor-pointer">NextAuth</a> para la autenticación, así como las novedades mas recientes como las <a href="https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations" target="_blank" class="gradient-text font-bold tech-highlights">server actions</a>. Mi camino en Next.js ha ido siempre marcado por <a href="https://nextjs.org/docs/app/building-your-application/configuring/typescript" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">TypeScript</a> y <a href="https://nextjs.org/docs/app" target="_blank" class="gradient-text-inverse font-bold tech-highlights">App Router</a>.`
     },
     {
+        name: 'Python',
+        src: python_logo,
+        url: 'https://www.python.org/doc/',
+        description: `<a href="https://www.python.org/doc/" target="_blank" class="text-[#FDE68A] font-bold tech-highlights cursor-pointer">Python</a> es un lenguaje que me encanta por ser simple y claro sin perder profundidad. Empecé con el curso de <a href="https://www.udemy.com/course/100-days-of-code" target="_blank" class="text-[#c084fc] font-bold tech-highlights cursor-pointer">Angela Yu</a> donde aprendí las particularidades de Python: data structures como los <a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">diccionarios</a>, su forma de manejar la lectura, escritura de (<a href="https://realpython.com/read-write-files-python/" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">file system</a>), etc... Quiero aprender <a href="https://www.djangoproject.com/" target="_blank" class="gradient-text font-bold tech-highlights cursor-pointer">Django</a> y seguir profundizando en este lenguaje, especialmente ahora que la IA es tan importante en el sector. Me encantaría poder trabajar desarrollando en Python.`
+    },
+    {
         name: 'PHP',
         src: php_logo,
         url: 'https://www.php.net/',
@@ -145,7 +148,6 @@ const SVGS = [
         url: 'https://chat.openai.com/',
         description: `He utilizado <a href="https://chat.openai.com/" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">ChatGPT</a> en diversos aspectos, desde crear imágenes para mis destinos en <a href="https://timewarp.es" target="_blank" class="gradient-text font-bold tech-highlights">Timewarp</a> hasta generar texto de descripciones, asistencia de código y optmizaciones, etc. Me parece importantísimo estar al tanto de los avances de IA, y especialmente de empresas como <a href="https://openai.com" target="_blank" class="text-[#c084fc] font-bold tech-highlights">OpenAI</a>. Es una tecnología muy útil y conocer y saber aplicar <a href="https://en.wikipedia.org/wiki/Prompt_engineering" target="_blank" class="gradient-text  font-bold tech-highlights cursor-pointer">prompt engineering</a> puede marcar la diferencia.`
     },
-    // {name: 'WebStorm', src: webstorm_logo, url: 'https://www.jetbrains.com/es-es/webstorm/'},
 ];
 
 export default SVGS;

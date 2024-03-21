@@ -1,17 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import Image from "next/image";
-import gsap from "gsap";
 import SVGS from "@/lib/svgs";
 import {motion} from "framer-motion";
-import Window from "@/components/ui/window";
 import Link from "next/link";
 import {FaExternalLinkAlt} from "react-icons/fa";
-import {MdKeyboardReturn} from "react-icons/md";
 import {IoReturnDownBackOutline} from "react-icons/io5";
-import {BiPointer} from "react-icons/bi";
-import {FaArrowDown, FaHandPointUp} from "react-icons/fa";
-import {PiArrowElbowLeftDownBold, PiArrowFatDownFill, PiHandPointingDuotone} from "react-icons/pi";
-import {FaAngleDown} from "react-icons/fa6";
+import {FaArrowDown} from "react-icons/fa";
 
 interface TechnologiesProps {
     navigation?: (index: string) => void;
@@ -167,29 +161,6 @@ const Technologies: React.FC<TechnologiesProps> = ({navigation = () => {}}) => {
                                     Ver proyectos
                                 </button>
                             </div>
-                            {/*<div className={"w-full flex justify-center items-center mt-32"}>*/}
-                            {/*    <button*/}
-                            {/*        type={"button"}*/}
-                            {/*        onClick={() => navigation('trabajos')}*/}
-                            {/*        className={"text-xl sm:text-3xl gradient-text gradient-text-animation-tech font-bold font-mono flex hover:scale-110 transition-all duration-300 p-2 items-center justify-center full-rounded-border-gradient w-fit"}>*/}
-                            {/*        Ver proyectos*/}
-                            {/*    </button>*/}
-                            {/*</div>*/}
-                            {/*<div className={"w-full flex justify-center items-center"}>*/}
-                            {/*    <svg stroke="currentColor" fill="url(#grad1)" stroke-width="0" viewBox="0 0 448 512"*/}
-                            {/*         className="w-6 h-6 sm:w-10 sm:h-10 mr-2 mt-1 text-pastel-violet" height="1em" width="1em"*/}
-                            {/*         xmlns="http://www.w3.org/2000/svg">*/}
-
-                            {/*        <defs>*/}
-                            {/*            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">*/}
-                            {/*                <stop offset="0%" style={{stopColor: '#c084fc', stopOpacity: 1}}/>*/}
-                            {/*                <stop offset="100%" style={{stopColor: '#FDE68A', stopOpacity: 1}}/>*/}
-                            {/*            </linearGradient>*/}
-                            {/*        </defs>*/}
-                            {/*        <path*/}
-                            {/*            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path>*/}
-                            {/*    </svg>*/}
-                            {/*</div>*/}
                         </div>
                     )
                 }

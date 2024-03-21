@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
 import { useActiveLinkOnScroll } from '@/hooks/useActiveLinkOnScroll';
-import Window from "@/components/ui/window";
 import Image from "next/image";
-import {AiFillStar} from "react-icons/ai";
 import {MdAlternateEmail} from "react-icons/md";
-import {PersonIcon} from "@radix-ui/react-icons";
-import {CgUser} from "react-icons/cg";
 import {FaUser} from "react-icons/fa";
-import Footer from "@/components/footer";
 
 const ContactSection = () => {
     const { activeLink, navigateTo } = useActiveLinkOnScroll(['contacto']);

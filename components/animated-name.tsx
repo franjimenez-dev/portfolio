@@ -48,9 +48,7 @@ const AnimatedName = () => {
                 setPurpleCount(purpleCount + 1);
             }
         }
-
         setHovered(newHovered);
-
     };
 
     useEffect(() => {
@@ -69,6 +67,7 @@ const AnimatedName = () => {
         if (sparkIndex === 0) {
             setIsAnimating(false);
         }
+
     }, [sparkIndex]);
 
 
