@@ -32,13 +32,8 @@ const NewProject: React.FC<NewProjectProps> = ({project, type= 1}) => {
     return (
         <>
 
-            {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-gradient-low-opacity opacity-5 blur-3xl ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
-            {/*<div className={`absolute inset-y-0 translate-x-1/2 ${type === 1 ? 'end-1/2' : 'end-0'} w-screen translate-x-0 bg-[#010206]/70  my-bg-image  ${type === 1 ? 'lg:rounded-e-[40px]' : 'lg:rounded-s-[40px]'} -z-10`}></div>*/}
-
             <div className={"container md:w-full py-10"}>
-                <div className={"py-2 " +
-                    // " pb-16 md:py-16 lg:pb-28 lg:pt-20 " +
-                    "relative "}>
+                <div className={"py-2 relative "}>
 
                     <div
                         className={`card-animation relative flex flex-col-reverse lg:flex-row justify-center items-center `}
