@@ -1,7 +1,21 @@
 import {ProjectData} from "@/lib/definitions";
+
+
+export const stori3s: ProjectData = {
+    title: "Stori3s",
+    description: `<a href="https://stori3s.es" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">Stori3s</a> es una página web de un restaurante ganador de un sol repsol. Elaborada con <a href="https://nextjs.org/" target="_blank" class="gradient-text font-bold tech-highlights">Next.js</a>, <a href="https://typescriptlang.org" class="gradient-text-inverse font-bold tech-highlights">TypeScript</a> y <a href="https://tailwindcss.com" target="_blank" class="gradient-text font-bold tech-highlights">TailwindCSS</a>. Es mi primer proyecto con aplicación al mundo real, y es usada diariamente por decenas de clientes.`,
+    images: [
+        "/projects/stori3s/1.webp",
+        "/projects/stori3s/2.webp",
+    ],
+    technologies: ["Next.js", "TypeScript","Tailwind.CSS", "PostgreSQL", "Blob"],
+    link: "https://www.stori3s.es",
+    logo: "/projects/stori3s/logo.svg",
+    type: 1
+}
 export const timewarp: ProjectData = {
     title: "TimeWarp",
-    description: `<a href="https://timewarp.es" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">Timewarp</a> es una página de booking ficticia sobre viajes en el tiempo. Con este proyecto pude consolidar mis conocimientos en <a href="https://nextjs.org/" target="_blank" class="gradient-text font-bold tech-highlights">Next.js</a>, <a href="https://typescriptlang.org" class="gradient-text-inverse font-bold tech-highlights">TypeScript</a> y <a href="https://tailwindcss.com" target="_blank" class="gradient-text font-bold tech-highlights">TailwindCSS</a>, así como iniciarme en animaciones con JavaScript con la librería <a href="https://gsap.com" target="_blank" class="gradient-text font-bold tech-highlights">GSAP</a> y en hosteo de imagenes con <a href="https://aws.amazon.com/es/s3/" target="_blank" class="gradient-text-inverse font-bold tech-highlights">AWS S3</a>.`,
+    description: `<a href="https://timewarp.vercel.app" target="_blank" class="text-[#FDE68A] font-bold tech-highlights">Timewarp</a> es una página de booking ficticia sobre viajes en el tiempo. Con este proyecto pude consolidar mis conocimientos en <a href="https://nextjs.org/" target="_blank" class="gradient-text font-bold tech-highlights">Next.js</a>, <a href="https://typescriptlang.org" class="gradient-text-inverse font-bold tech-highlights">TypeScript</a> y <a href="https://tailwindcss.com" target="_blank" class="gradient-text font-bold tech-highlights">TailwindCSS</a>, así como iniciarme en animaciones con JavaScript con la librería <a href="https://gsap.com" target="_blank" class="gradient-text font-bold tech-highlights">GSAP</a> y en hosteo de imagenes con <a href="https://aws.amazon.com/es/s3/" target="_blank" class="gradient-text-inverse font-bold tech-highlights">AWS S3</a>.`,
     images: [
         "/projects/timewarp/1.webp",
         "/projects/timewarp/2.webp",
@@ -12,7 +26,7 @@ export const timewarp: ProjectData = {
         "/projects/timewarp/7.webp",
     ],
     technologies: ["Next.js", "TypeScript","Tailwind.CSS", "PostgreSQL", "AWS S3", "GSAP"],
-    link: "https://www.timewarp.es",
+    link: "https://timewarp.vercel.app",
     logo: "/projects/timewarp/logo.svg",
     type: 1
 }
