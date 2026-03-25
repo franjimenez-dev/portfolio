@@ -2,7 +2,7 @@
 import React from 'react';
 import {useActiveLinkOnScroll} from "@/hooks/useActiveLinkOnScroll";
 import NewProject from "@/components/ui/project";
-import {timewarp} from "@/lib/data";
+import {stori3s, timewarp} from "@/lib/data";
 import {metazoa} from "@/lib/data";
 import {AiFillStar} from "react-icons/ai";
 
@@ -18,6 +18,9 @@ const WorksSection = () => {
                         Mis proyectos
                         <AiFillStar className={"w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-[#FDE68A] ml-2"}/>
                     </h2>
+                </div>
+                <div className={"relative"}>
+                    <NewProject project={stori3s} type={1}/>
                 </div>
                 <div className={"relative"}>
                     <NewProject project={timewarp} type={1}/>
